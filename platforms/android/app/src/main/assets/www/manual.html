@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NO TE CALLES</title>
+    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <link href="css/overlay.css" rel="stylesheet">
+     
+ 
+    
+    
+ 
+     <!DOCTYPE html>
+     <html lang="en">
+       <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href="css/bootstrap.min.css" rel="stylesheet">
+         <link href="css/style.css" rel="stylesheet">
+         <link href="css/overlay.css" rel="stylesheet">
+         <link rel="stylesheet" href="dist/aos.css" />
+         <script src="dist/aos.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     
+        <style type="text/css">
+          .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+          }
+          .step.active {
+            opacity: 1;
+          }
+
+        </style>
+       </head>
+       <body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mywizardmodal">Start wizard</button>
+    <div class="modal" id="mywizardmodal" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container">
+              <h1 class="modal-title d-block w-100 text-center">Wizard in a modal</h1>
+              <div class="w-100 text-center">
+                <div class='step'></div>
+                <div class='step'></div>
+                <div class='step'></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class='wizard-tab' stepname='step1'>
+              <h2>This is the first step</h2>
+            </div>
+            <div class='wizard-tab' stepname='step2'>
+              <h2>This is the second step</h2>
+            </div>
+            <div class='wizard-tab' stepname='step3'>
+              <h2>This is the last step</h2>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div>
+              <button class='btn btn-primary btn-prev'>Prev</button>
+              <button class='btn btn-primary btn-next'>Next</button>
+              <button class='btn btn-primary btn-end' data-dismiss="modal">Finalize</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+    $(function () {
+        $("#mywizardmodal").wizard().modal("show").on("show.bs.modal", function () {
+            // Set the tab to the main one
+            $("#mywizardmodal").wizard("begin");
+          });
+      });
+  </script>
+  </body>
+  
+</html>

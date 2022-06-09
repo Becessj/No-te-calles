@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+
+<style>
+
+</style>
+
+
+
+
+<html>
+    <body style="background-color: #fff;">
+        <div class="container" style="margin-top: 3em;">
+                <div class="row" style="text-align: center;">
+                    <div class="col-12">
+                        <h4>Lectura de Medidor de Agua Potable</h4>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="custom-file mb-3">
+                        <input type="file" class="custom-file-input" id="customFile" name="filename" onchange='openFile(event)' >
+                        <label class="custom-file-label" for="customFile">Seleccionar datos</label>
+                      </div>
+                      <script>
+                        // Add the following code if you want the name of the file appear on select
+                        $(".custom-file-input").on("change", function() {
+                          var fileName = $(this).val().split("\\").pop();
+                          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                        });
+                    </script>
+                </div>  
+            </div>
+        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="form-group">
+                            <label for="periodo">PERIODO</label>
+                            <input type="text" class="form-control" id="periodo" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12">
+                        <label for="ruta">RUTA</label>
+                        <select id="ruta" name="ruta" onchange="sectorc()" class="form-control">
+                        </select>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="form-group">
+                            <label for="periodo">SECTORC</label>
+                            <input type="text" class="form-control" id="sectorc" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div><button id = 'generar' onclick='generar()' type="button" class="btn btn-primary btn-lg btn-block">MOSTRAR REGISTROS</button></div>
+                        
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="table-responsive">
+                            <table id="tabla" class="table table-striped table-bordered dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>RUTEO</th>
+                                        <th>MEDIDOR</th>
+                                        <th>METRO3</th>
+                                        <th>OBSERVACIÓN</th>
+                                        <th style='width:150px;'>NOMBRE_COMPLETO_DEL_USUARIO</th>
+                                        <th>DOCUMENTO</th>
+                                        <th style='width:150px;'>DIRECCIÓN_DEL_USUARIO_DE_AGUA_POTABLE</th>      
+                                    </tr>
+                                </thead> 
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div><button id="guardar" onclick='SaveFile()' type="button" class="btn btn-primary btn-lg btn-block">GUARDAR</button></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-sm" style="text-align: center;margin-top: 5em; background-color: #fff;">
+                <div class="row">
+                    <div class="col-12">
+                        <img src = "img/guaman.jfif" width="70px" style="margin: auto;">
+                        <br>
+                    </div>
+                    <div class="col-12" style="font-size: 10px;margin-top: 1em;" >
+                        <p style="text-align: center;">Centro Guamán Poma de Ayala</p>
+                        <p style="text-align: center;">Copyright © Todos los derechos reservados.</p>
+                        <p style="text-align: center;">Cusco - 2020</p>
+                    
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            $( document ).ready(function() {
+                document.getElementById("guardar").disabled = true;
+                document.getElementById("generar").disabled = true;
+                document.getElementById("tabla").style.display = "none";
+            });
+            </script>
+
+           
+            
+            
+
+        <script>
+            document.addEventListener("deviceready", onDeviceReady, false);
+            function onDeviceReady(){
+                    document.addEventListener("backbutton", function(e){
+                    navigator.notification.confirm("Desea salir guardando los cambios?",fnLogout,"Advertencia","Si,No,Cancelar"); // u can change the button names in the place of ok,cancel.
+                }, false); 
+            }
+
+            function fnLogout(button) {
+                if(button == 1) {
+                    SaveFile();
+                    navigator.app.exitApp(); 
+                } else if (button == 2) {
+                    navigator.app.exitApp();  
+                }  else {
+                    return;
+                }                   
+            }
+
+            
+
+
+            
+
+
+            var array = [];
+            var nuevotexto = "";
+            var nombre_archivo = "";
+            var edited = -1;
+
+            var openFile = function(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            
+            reader.onload = function(){
+            var text = reader.result;
+            
+            var rowCount = $('#tabla tr').length;
+        
+            if(rowCount > 1){
+                array = [];
+                nuevotexto = "";
+                nombre_archivo = "";
+                var tabla = document.getElementById('tabla');
+                tabla.removeChild(tabla.getElementsByTagName("tbody")[0]);
+            }
+            
+           if (text.includes("\n")){
+                var texto = text.split("\n");
+            }
+            else if (text.includes("\r")){
+                var texto = text.split("\r");
+            }
+
+                for (i = 0 ; i< texto.length -1 ; i++){
+                    var elementos = texto[i].split(";");
+                    var elemento = [];
+                    for(j = 0 ; j < elementos.length; j++){
+                        if (elementos[j].includes("\n")){
+                            elementos[j] = String(elementos[j].replace("\n", " "));
+                            
+                        }
+                        if (elementos[j].includes("\r")){
+                            elementos[j] = String(elementos[j].replace("\r", " "));     
+                        }
+                        elemento.push(elementos[j]);
+                    }
+                        
+                    if(elementos.length == 13){
+                        elemento.push("");
+                    }
+                   
+                    array.push(elemento);
+                }
+                comboboxes();
+                document.getElementById("generar").disabled = false;
+                document.getElementById("tabla").style.display = "block";
+            };
+            reader.readAsText(input.files[0]);
+            nombre_archivo = input.files[0].name;
+            
+
+            
+  
+            
+        };
+</script>
+
+<script>
+    function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+
+function sectorc(){
+    var ruta = document.getElementById('ruta').value;
+    var sectorc = "";
+    for (i = 0; i< array.length;i++)
+    {
+        if(array[i][8] == ruta){
+            sectorc = array[i][9];
+            break;
+        }
+    }
+    document.getElementById('sectorc').value = sectorc;
+}
+
+    function comboboxes(){
+        var periodo = array[0][7];
+        document.getElementById("periodo").value = periodo;
+        document.getElementById("ruta").innerHTML = "";
+        var uniquelist = [];
+        for (i = 0; i < array.length; i++){
+            uniquelist.push(array[i][8]);
+
+        }
+        var unique = uniquelist.filter( onlyUnique );
+
+        for (j = 0; j < unique.length;j++){
+            $('#ruta').append(`<option value="${unique[j]}"> 
+                                       ${unique[j]} 
+                                  </option>`);
+        }
+    }
+
+</script>
+
+<script>
+    function cambiometro(indice){
+        try {
+        var metro = document.getElementById('metro' + indice);
+        if(typeof(metro) != 'undefined' && metro != null){
+        var d = new Date();
+        array[indice][2] = d.getDate()  + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " " +d.getHours() + ":" + d.getMinutes();
+        array[indice][5] = metro.value;
+        ind = indice;
+        edited = indice;
+        position(indice);
+        array[indice][13] = latitude + " " + longitude;
+        
+  
+        
+        }
+
+        } catch (error) {
+            
+        }       
+    }
+
+    function cambioobs(indice){
+        try {
+            
+                var obs = document.getElementById('obs' + indice);
+                if(typeof(obs) != 'undefined' && obs != null){
+                var d = new Date();
+                array[indice][2] = d.getDate()  + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " " +d.getHours() + ":" + d.getMinutes();
+                array[indice][6] = obs.value;
+                ind = indice;
+                if (edited !=indice){
+                    position(indice);
+                    array[indice][13] = latitude + " " + longitude;
+                }
+                
+
+        }
+
+        } catch (error) {
+            
+        }
+    }
+</script>
+
+
+<script>
+    function generar(){
+        var rowCount = $('#tabla tr').length;
+        
+        if(rowCount > 1){
+            var tabla = document.getElementById('tabla');
+            tabla.removeChild(tabla.getElementsByTagName("tbody")[0]);
+        }
+        
+    
+        var ruta = document.getElementById("ruta").value;
+        var table = document.getElementById("tabla");
+        var tbody = document.createElement("tbody");
+            for (i = 0 ; i < array.length; i++){
+                if(array[i][8] == ruta){
+                    var tr = document.createElement('tr');
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td>"+array[i][3]+"</td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td>"+array[i][4]+"</td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td><input type='number' id='metro"+i+"' value='"+array[i][5]+"' onchange=cambiometro("+i+") style='width: 5em;' ></td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td><input type='text' id='obs"+i+"' value='"+array[i][6]+"' onchange=cambioobs("+i+") ></td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td style='width:150px;'>"+array[i][10]+"</td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td>"+array[i][11]+"</td>";
+                    td.id = "elemento" + i ;
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = "<td style='width:150px;'>"+array[i][12]+"</td>";
+                    td.id = "elemento" + i ;
+                    tbody.appendChild(tr);
+                }
+            }
+            table.appendChild(tbody);
+            document.getElementById("guardar").disabled = false;
+            
+            
+          
+    }
+
+</script>
+
+
+
+<script>
+    var latitude = "";
+    var longitude = "";
+    var ind = "";
+        
+    var onSuccess = function(position) {
+    latitude = position.coords.latitude;
+	longitude = position.coords.longitude;
+    array[ind][13] = latitude + " " + longitude;
+	navigator.geolocation.clearWatch(watchID);
+    
+    
+    };
+
+    function onError(error) {
+        alert('Código: '+ error.code+ '\n' + 'Mensaje: ' + error.message + '\n');
+    }
+    
+       
+    function position(i){
+		var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError,{ enableHighAccuracy: true });
+         
+    }        
+</script>
+
+
+<script>
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+
+//var absPath = "file:///storage/emulated/0/";
+var absPath = cordova.file.externalRootDirectory;
+var fileDir = cordova.file.externalDataDirectory.replace(cordova.file.externalRootDirectory, '');
+var fileName = "somename.txt";
+var filePath = fileDir + fileName;
+
+fs.root.getFile(filePath, { create: true, exclusive: false }, function (fileEntry) {
+    writeFile(fileEntry, BINARY_ARR).then(function(){
+      //do something here
+    });
+}, function(err) {});
+}, function(err) {});
+
+function writeFile(fileEntry, dataObj) {
+return $q(function (resolve, reject) {
+    fileEntry.createWriter(function (fileWriter) {
+        fileWriter.onwriteend = function () {
+            resolve();
+        };
+        fileWriter.onerror = function (e) {
+            reject(e);
+        };
+        fileWriter.write(dataObj);
+    });
+});
+}
+</script>
+
+
+<script>
+function generate() {
+   for (i = 0; i < array.length;i++){
+    try {
+        var metro = document.getElementById('metro' + i);
+        var obs = document.getElementById('obs' + i);
+        if(typeof(metro) != 'undefined' && metro != null){
+        var d = new Date();
+        array[i][2] = d.getDate()  + "/" + (d.getMonth()+1) + "/" + d.getFullYear() + " " +d.getHours() + ":" + d.getMinutes();
+        array[i][5] = metro.value;
+        array[i][6] = obs.value;
+    }
+
+    } catch (error) {
+        
+    }
+        }
+    }
+</script>
+
+<script>
+       var textt="";
+       function SaveFile()
+      {  
+        for (i = 0; i < array.length; i++){
+            for (j = 0; j < 14; j++){
+            textt= textt + array[i][j] + ";";
+            }
+            textt = textt.slice(0, -1) + '\n';
+        }
+        
+          /* initialize global variable with text to be written in file */
+         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,onFileSystemSuccess, fail);
+
+         /* This will check permission for storage read and write, and if got permission then 
+          function send parameter will be called else if not granted then third parameter ie 
+         fail function will be called */
+      }
+
+      function onFileSystemSuccess(fileSystem) 
+      {
+         fileSystem.root.getFile("data/" + nombre_archivo,{create: true, exclusive: 
+      false},gotFileEntry,fail);
+        /* This will create a file with name Demo.txt in internal storage . and similarly on 
+         sucessfully create it will call second parameter function i.e. gotFileEntry */
+      }
+
+      function gotFileEntry(fileEntry) {
+        fileEntry.createWriter(gotFileWriter, fail);
+        /* This will get a file object with path call createWriter in which 1st parameter is 
+       use to write content in file and second parameter of fail to create writer */
+      }
+
+      function gotFileWriter(writer) 
+      {
+        writer.write(textt,'UTF-8');/* passing parameter of the textt which is global and initialize 
+       at first called function*/
+          writer.onwriteend = function(evt) {
+            alert("REGISTRO GENERADO");
+            window.location.href = "index.html";
+          }; /*This function will be called once file is written with text and saved */
+       }
+
+     function fail(error)
+     {
+        alert("Error","There was some problem\nError:"+error.code,"Ok");
+     }
+</script>
+
+
+
+
+</head>
+
+<body>
+
+
+</body>
+</html>
+
+        
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

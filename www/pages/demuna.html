@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+     <link href="../css/overlay.css" rel="stylesheet">
+     <link rel="stylesheet" href="../dist/aos.css" />
+     <script src="../dist/aos.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script type='text/javascript'>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+</script>
+ 
+  <style type='text/css'>
+    * ,*::after, *::before{
+ box-sizing:border-box;
+}
+
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:#E70505;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff
+}
+#scroll:hover {
+    background-color:#EE7979;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+.wrap {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.contenedor-caja-video{
+ width: 80%;
+}
+
+.caja-video  {
+ position:relative;
+ background-color:red;
+  width: 100%;
+ padding-bottom:56.25%;
+ 
+}
+
+.caja-video::before {
+ position: absolute;
+ content:'';
+ 
+ display:block;
+ padding-bottom:56.25%;
+}
+
+.video{
+ position:absolute;
+ width: 100%;
+ height: 100%;
+ 
+}
+
+    @font-face {
+      font-family: "Learners";
+      src: url("../font/Letters for Learners.ttf");
+    }
+
+    @font-face {
+      font-family: "Cream";
+      src: url("../font/Cream Cake.ttf");
+    }
+
+    @font-face {
+      font-family: "Kid1";
+      src: url("../font/Kid Knowledge 1.otf");
+    }
+
+    @font-face {
+      font-family: "KidOutline";
+      src: url("../font/Kid Knowledge 1 outline.otf");
+    }
+
+    @font-face {
+      font-family: "KidRustic";
+      src: url("../font/Kid Knowledge 2 Rustic.otf");
+    }
+
+    @font-face {
+      font-family: "KidClean";
+      src: url("../font/Kid Knowledge 2 Clean.otf");
+    }
+
+
+  
+ 
+
+  body{
+    background-color:white;
+    font-family: "Learners", serif ;
+  }
+
+  .titulo{
+    color:red;
+    font: 30px Kid1;
+    text-align: center;
+  }
+
+  .titulo-last{
+    background-color:red;
+    color:white;
+    font: 20px Kid1;
+    -webkit-border-top-right-radius: 50px 40px;
+    -webkit-border-bottom-right-radius: 50px 40px;
+    -webkit-border-top-left-radius: 50px 40px;
+    -webkit-border-bottom-left-radius: 50px 40px;
+    padding: 10px;
+    text-align: center;
+   
+    
+  }
+
+
+
+  .first{
+    float: left;;
+    color:orange;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .second{
+    float:left;
+    color:green;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .third{
+    float:left;
+    color:purple;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .fourth{
+    float:left;
+    color:cornflowerblue;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .numberCircle {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    font: 40px Cream;
+    line-height: 3rem;
+}
+
+.item1{
+  background-color: orange;
+  float: left;
+  color:white;
+}
+
+.item2{
+  background-color: green;
+  float:left;
+  color:white;
+}
+
+.item3{
+  background-color: purple;
+  float:left;
+  color:white;
+}
+
+.item4{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+}
+
+.itemfirst{
+  background-color: orange;
+  float: left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemsecond{
+  background-color: green;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemthird{
+  background-color: purple;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemfourth{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.item5{
+  float:left;
+  
+}
+
+.violencia-item{
+  background-color:rgb(221, 183, 86);
+}
+
+.btn-primary {
+  background-color: transparent;
+  border-color: black;
+  color:black;
+}
+
+.header{
+  height:50px;
+  background-image: url('../img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x; 
+}
+
+.footer{
+  height:50px;
+  background-image: url('../img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+.imgWrapper4, .imgWrapper3 {
+    font-size: 0;
+    text-align: center;
+}
+.imgWrapper4 .imgResponsiva,
+.imgWrapper3 .imgResponsiva {
+    display: inline-block;
+    font-size: inherit;
+}
+.imgWrapper4 .imgResponsiva {width: 25%; max-width: 345px;}
+.imgWrapper3 .imgResponsiva {width: 33.3%; max-width: 345px;}
+
+.imgResponsiva img {
+    height: auto;
+    width: 100%;
+}
+.left {
+  float: left;
+  width: 125px;
+  text-align: right;
+  margin: 2px 10px;
+  display: inline
+}
+.right {
+  float: left;
+  text-align: left;
+  margin: 2px 10px;
+  display: inline
+}
+
+  </style>
+  </head>
+  <body>
+    <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Ir arriba<span></span></a>
+    <div class= "header">
+                
+    </div>
+                
+                  
+                  <div class="row" style=" margin-top: 1em;margin-bottom: 1em;">
+                       <div class="left"><a style="color:red;font-size: 10px;" href="../menu.html" >Volver<img style="color:red;" src = "../img/back.png" width= "50px" ></a>
+                       </div>
+                        
+                        <div class="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:red;font-size: 10px;" href="http://guamanpoma.org/NTC/DIRECTORIO NO TE CALLES.xlsx" target="_blank" >Directorio&nbsp;&nbsp;<img style="color:red;" src = "../img/descarga.png" width= "15px" ></a>
+                        </div>
+                      </div>
+                       
+                                <h2 id="dem" align="center">DEMUNA  </h2> 
+                                  <div class="col-12">
+                                    <p align="justify"><strong>Es un servicio, que brinda atención especializada y confidencial y que actúa sobre las causas que limitan o evitan el ejercicio de los derechos de las niñas, niños y adolescentes, mediante: </p>
+                                  </div>
+                                <p>
+                                  
+                                    <g id="surface1">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 18.246094 8.304688 L 10.445312 0.503906 C 9.984375 0.0429688 9.242188 0.0507812 8.785156 0.5 C 8.328125 0.960938 8.328125 1.703125 8.785156 2.160156 L 16.585938 9.960938 C 17.042969 10.417969 17.789062 10.417969 18.246094 9.960938 C 18.703125 9.503906 18.703125 8.761719 18.246094 8.304688 Z M 18.246094 8.304688 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 8.207031 3.238281 L 8.148438 3.53125 C 7.734375 5.601562 6.730469 7.566406 5.371094 9.160156 L 9.613281 13.402344 C 11.207031 12.042969 13.144531 11.011719 15.214844 10.597656 L 15.507812 10.539062 Z M 8.207031 3.238281 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.59375 10.039062 L 1.691406 12.9375 C 1.007812 13.625 1.003906 14.738281 1.691406 15.425781 L 3.347656 17.082031 C 4.035156 17.765625 5.148438 17.769531 5.835938 17.082031 L 8.734375 14.183594 Z M 5.007812 14.597656 C 4.777344 14.824219 4.40625 14.824219 4.179688 14.597656 C 3.949219 14.367188 3.949219 13.996094 4.179688 13.769531 L 5.007812 12.9375 C 5.234375 12.710938 5.605469 12.710938 5.835938 12.9375 C 6.066406 13.167969 6.066406 13.539062 5.835938 13.769531 Z M 5.007812 14.597656 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 11.183594 17.394531 L 11.980469 16.597656 C 12.667969 15.910156 12.664062 14.796875 11.980469 14.109375 L 11.386719 13.519531 C 11.058594 13.738281 10.746094 13.976562 10.445312 14.230469 L 11.152344 14.941406 C 11.378906 15.167969 11.378906 15.535156 11.152344 15.769531 L 10.339844 16.578125 L 9.148438 15.425781 L 7.492188 17.082031 L 10.152344 19.65625 C 10.605469 20.113281 11.351562 20.117188 11.808594 19.65625 C 12.265625 19.199219 12.265625 18.457031 11.808594 18 Z M 11.183594 17.394531 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 13.550781 0 C 13.226562 0 12.964844 0.261719 12.964844 0.585938 L 12.964844 1.757812 C 12.964844 2.082031 13.226562 2.34375 13.550781 2.34375 C 13.875 2.34375 14.136719 2.082031 14.136719 1.757812 L 14.136719 0.585938 C 14.136719 0.261719 13.875 0 13.550781 0 Z M 13.550781 0 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 18.238281 4.6875 L 17.066406 4.6875 C 16.742188 4.6875 16.480469 4.949219 16.480469 5.273438 C 16.480469 5.597656 16.742188 5.859375 17.066406 5.859375 L 18.238281 5.859375 C 18.5625 5.859375 18.824219 5.597656 18.824219 5.273438 C 18.824219 4.949219 18.5625 4.6875 18.238281 4.6875 Z M 18.238281 4.6875 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 17.480469 1.34375 C 17.25 1.113281 16.878906 1.113281 16.652344 1.34375 L 15.480469 2.515625 C 15.25 2.746094 15.25 3.113281 15.480469 3.34375 C 15.707031 3.574219 16.078125 3.574219 16.308594 3.34375 L 17.480469 2.171875 C 17.707031 1.941406 17.707031 1.574219 17.480469 1.34375 Z M 17.480469 1.34375 "/>
+                                    </g>
+                                    </svg>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <img src = "../img/image1.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-12">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>La restitución de sus derechos vulnerado</b></li>
+                                      <li><b>El desarrollo o fortalecimiento de las capacidades en las niñas, niños y adolescentes para su protección integral.</b></li>
+                                      <li><b>El desarrollo de las competencias parentales.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                <div class="col-12">
+                                  <h4 class="first">Servicios que brinda:  </h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <br>
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-11">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ul>
+                                      <li><b>Brinda orientación psicológica, social y legal en casos de: Alimentos, Régimen de Visitas, Tenencia, Filiación, Violencia Psicológica y Física, Violencia Familiar, Violencia Escolar, Adicción, Abuso y Acoso Sexual.</b></li>
+                                      <li><b>Efectúa conciliación extrajudicial especializada, emitiendo actas que constituyen título ejecutivo en materia de alimentos, tenencia y régimen de visitas, siempre que las mismas materias no hayan sido resueltas por instancia judicial.</b></li>
+                                      <li><b>Dispone la apertura de cuentas de consignación de pensión de alimentos derivada de los acuerdos conciliatorios que haya celebrado.</b></li>
+                                      <li><b>Promueve la obtención del Documento Nacional de Identidad, coordinando con el Registro Nacional de Identificación y Estado Civil – RENIEC y las Oficinas de Registro Civil de las Municipalidades.</b></li>
+                                      <li><b>Registra la firma de Actas de Compromiso en orientación y normas de comportamiento de la niña, niño y adolescente.</b></li>
+                                      <li><b>Registra a los Adolescentes Trabajadores del Hogar, que laboran en el Distrito, en el marco de la Ley N° 27571- Artículo 51°</b></li>
+
+                                      <li><b>Realiza talleres de Prevención de la Violencia Familiar y Prácticas de Valores dirigido a la comunidad.</b></li>
+                                      <li><b>Difunde e informa sobre los derechos y deberes de las niñas, niños y adolescentes a través de charlas y talleres de capacitación al personal docente de los colegios.</b></li>
+                                      <li><b>Realiza charlas dinámicas para el fortalecimiento de las relaciones con su familia, y su entorno comunal y social.</b></li>
+                                      <li><b>Brinda información y orientación sobre Riesgos y Peligros en las Nuevas Tecnologías del Internet, Acoso Escolar (Bullying) y Trata de Personas.</b></li>
+                                      <li><b>Realiza programas de prevención y consumo de drogas en adolescentes.</b></li>
+                                      <li><b>Colabora en los procedimientos por riesgo de desprotección familiar a solicitud de la autoridad competente.</b></li>
+                                      <li><b>Comunica y deriva las presuntas faltas, delitos o contravenciones en contra de niñas, niños y adolescentes, a las autoridades competentes (PNP, Fiscalía, UPE)</b></li>
+                                    </ul>
+                              </div>
+                             
+                            </div>
+                          </div> 
+
+                        </div>
+                        <div class="wrap">
+                          <button  onclick="geo()"class="button"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;BUSCA AYUDA</button>
+                        </div>
+                        <br><br>
+                        <div class= "footer">
+                
+                        </div>
+                        
+                        
+
+          
+            
+              
+              <script>
+                AOS.init({
+                  easing: 'ease-in-out-sine'
+                });
+              </script>
+              <script type="text/javascript">
+              function descarga(){
+                Swal.fire({
+                html: `<h1>Descargar directorio</h1>
+                <p>Debes tener instalado un lector de archivos<strong>EXCEL</strong></p>
+                <br>
+                <a href="#">Descargar</a>
+                `,
+            });
+            }
+            </script>
+
+              <script>
+                var latitude = "";
+                var longitude = "";
+
+
+                function geo(){
+                  position();
+                  }
+
+               
+                    
+                var onSuccess = function(position) {
+                latitude = position.coords.latitude;
+              longitude = position.coords.longitude;
+                
+              window.location.href = 'https://www.google.com/maps/d/u/3/edit?mid=1So9IvGMoUBhqwdeu70f3VgWI8jaK6cj0&usp=sharing =es ='+latitude+'%2C'+longitude+'&z=17'; 
+                
+              
+                
+                };
+            
+                function onError(error) {
+                    alert('Código: '+ error.code+ '\n' + 'Mensaje: ' + error.message + '\n');
+                }
+                
+                   
+                function position(){
+                var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError,{ enableHighAccuracy: true });
+                     
+                }        
+            </script>
+           <script type='text/javascript'>
+            $(document).ready(function(){ 
+                $(window).scroll(function(){ 
+                    if ($(this).scrollTop() > 100) { 
+                        $('#scroll').fadeIn(); 
+                    } else { 
+                        $('#scroll').fadeOut(); 
+                    } 
+                }); 
+                $('#scroll').click(function(){ 
+                    $("html, body").animate({ scrollTop: 0 }, 600); 
+                    return false; 
+                }); 
+            });
+            </script>
+            
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--menu-->
+     <!-- Include jQuery -->
+    <script src="javascripts/jquery.js"></script>
+    <!-- Include the Sidr JS -->
+    <script src="js/sidr/jquery.sidr.min.js"></script>
+    <script src="../plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../plugins/sweetAlert2/sweetalert2.min.css">
+    
+
+    
+  </body>
+</html>

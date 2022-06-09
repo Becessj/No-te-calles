@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "¡NO TE CALLES!",
+  "short_name": "¡NO TE CALLES!",
+  "version": "io.cordova.hellocordova",
+  "description": "VIOLENCIA",
+  "author": "Ing. Jose Guillermo Andrade Cari",
+  "icons": [],
+  "start_url": "index.html"
+}

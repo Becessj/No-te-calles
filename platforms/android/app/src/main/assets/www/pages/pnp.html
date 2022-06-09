@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <link href="css/overlay.css" rel="stylesheet">
+     <link rel="stylesheet" href="dist/aos.css" />
+     <script src="dist/aos.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <style type='text/css'>
+    * ,*::after, *::before{
+ box-sizing:border-box;
+}
+
+.contenedor-caja-video{
+ width: 80%;
+}
+
+.caja-video  {
+ position:relative;
+ background-color:red;
+  width: 100%;
+ padding-bottom:56.25%;
+ 
+}
+
+.caja-video::before {
+ position: absolute;
+ content:'';
+ 
+ display:block;
+ padding-bottom:56.25%;
+}
+
+.video{
+ position:absolute;
+ width: 100%;
+ height: 100%;
+ 
+}
+
+    @font-face {
+      font-family: "Learners";
+      src: url("font/Letters for Learners.ttf");
+    }
+
+    @font-face {
+      font-family: "Cream";
+      src: url("font/Cream Cake.ttf");
+    }
+
+    @font-face {
+      font-family: "Kid1";
+      src: url("font/Kid Knowledge 1.otf");
+    }
+
+    @font-face {
+      font-family: "KidOutline";
+      src: url("font/Kid Knowledge 1 outline.otf");
+    }
+
+    @font-face {
+      font-family: "KidRustic";
+      src: url("font/Kid Knowledge 2 Rustic.otf");
+    }
+
+    @font-face {
+      font-family: "KidClean";
+      src: url("font/Kid Knowledge 2 Clean.otf");
+    }
+
+
+  
+ 
+
+  body{
+    background-color:white;
+    font-family: "Learners", serif ;
+  }
+
+  .titulo{
+    color:red;
+    font: 30px Kid1;
+    text-align: center;
+  }
+
+  .titulo-last{
+    background-color:red;
+    color:white;
+    font: 20px Kid1;
+    -webkit-border-top-right-radius: 50px 40px;
+    -webkit-border-bottom-right-radius: 50px 40px;
+    -webkit-border-top-left-radius: 50px 40px;
+    -webkit-border-bottom-left-radius: 50px 40px;
+    padding: 10px;
+    text-align: center;
+   
+    
+  }
+
+
+
+  .first{
+    float: left;;
+    color:orange;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .second{
+    float:left;
+    color:green;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .third{
+    float:left;
+    color:purple;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .fourth{
+    float:left;
+    color:cornflowerblue;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .numberCircle {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    font: 40px Cream;
+    line-height: 3rem;
+}
+
+.item1{
+  background-color: orange;
+  float: left;
+  color:white;
+}
+
+.item2{
+  background-color: green;
+  float:left;
+  color:white;
+}
+
+.item3{
+  background-color: purple;
+  float:left;
+  color:white;
+}
+
+.item4{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+}
+
+.itemfirst{
+  background-color: orange;
+  float: left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemsecond{
+  background-color: green;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemthird{
+  background-color: purple;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemfourth{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.item5{
+  float:left;
+  
+}
+
+.violencia-item{
+  background-color:rgb(221, 183, 86);
+}
+
+.btn-primary {
+  background-color: transparent;
+  border-color: black;
+  color:black;
+}
+
+.header{
+  height:50px;
+  background-image: url('img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x; 
+}
+
+.footer{
+  height:50px;
+  background-image: url('img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+.imgWrapper4, .imgWrapper3 {
+    font-size: 0;
+    text-align: center;
+}
+.imgWrapper4 .imgResponsiva,
+.imgWrapper3 .imgResponsiva {
+    display: inline-block;
+    font-size: inherit;
+}
+.imgWrapper4 .imgResponsiva {width: 25%; max-width: 345px;}
+.imgWrapper3 .imgResponsiva {width: 33.3%; max-width: 345px;}
+
+.imgResponsiva img {
+    height: auto;
+    width: 100%;
+}
+
+  </style>
+ 
+  </head>
+  <body>
+  
+    <div class= "header">
+                
+    </div>
+  
+              <div class="container" style="margin-top: 1em; ">
+                  <div class="row" style="text-align: center;">
+                    <div class="aos-item" data-aos="fade-up" data-aos-duration="1500" style="text-align: center;">
+                       <div class="col-12" style="text-align: center;">
+                          <div class="aos-item__inner" style="text-align: center;">
+                           <!-- <h3 class="titulo">Ruta de atención de delitos de violencia</h3>-->
+                            <h2 class="titulo-last"> Defensoría Municipal de Niñas, Niños y Adolescentes  </h2>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <br>
+
+                  <div class="row" style=" margin-top: 1em;margin-bottom: 1em;">
+                    <div class="left"><a style="color:red;font-size: 10px;" href="../menu.html" >Volver<img style="color:red;" src = "../img/back.png" width= "50px" ></a>
+                       </div>
+                        
+                        <div class="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:red;font-size: 10px;" href="http://guamanpoma.org/NTC/DEMUNAS.xlsx" target="_blank" ><img style="color:red;" src = "../img/descarg
+                      </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <div class="item1 numberCircle">1</div>
+                                <h4 class="first">INFÓRMATE</h4>
+                                <br><br><br><br>
+                                    <div class="container">   
+                                    <div class="row">       
+                                      <div class="col-md">        
+                                          <div class="card">
+                                                      
+                                            <div  class="aos-item__inner" class="card-body">
+                                              <div class="row">
+                                                  <div class="col-3">
+                                                    <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                                                      <div class="aos-item__inner">
+                                                        <img src = "img/image1.png" width= "100px" style="margin: auto;">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                              <div class="col-9">
+                                                <div class= "row">
+                                                  <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                                    <div class="col-12">
+                                                      <div class="aos-item__inner">
+                                                        <p align="justify">Es un servicio, que brinda atención especializada y confidencial y que actúa sobre las causas que limitan o evitan el...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="menu.html#dem" class="btn btn-primary btn-sm">Leer más</a></p>
+                                                      </div>  
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>    
+                                      </div>
+                                              
+                                            </div>
+                                          </div>          
+                                      </div>
+                                    </div>
+                                  </div>
+                                      <br>
+                                      <div class="container">   
+                                    <div class="row">       
+                                      <div class="col-md">        
+                                          <div class="card">
+                                                      
+                                            <div  class="aos-item__inner" class="card-body">
+                                              <div class="row">
+                                                  <div class="col-3">
+                                                    <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                                                      <div class="aos-item__inner">
+                                                        <img src = "img/cem1.png" width= "80px" style="margin: auto;">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                              <div class="col-9">
+                                                <div class= "row">
+                                                  <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                                    <div class="col-12">
+                                                      <div class="aos-item__inner">
+                                                        <p align="justify">Son servicios públicos especializados y gratuitos, de atención integral y multidisciplinaria, para víctimas de violencia... <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="menu.html#cem" class="btn btn-primary btn-sm">Leer más</a></p>
+                                                      </div>  
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>    
+                                      </div>
+                                              
+                                            </div>
+                                          </div>          
+                                      </div>
+                                    </div>
+                                  </div>
+                                      <br>
+                                      <div class="container">   
+                                    <div class="row">       
+                                      <div class="col-md">        
+                                          <div class="card">
+                                                      
+                                            <div  class="aos-item__inner" class="card-body">
+                                              <div class="row">
+                                                  <div class="col-3">
+                                                    <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                                                      <div class="aos-item__inner">
+                                                        <img src = "img/policia.png" width= "80px" style="margin: auto;">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                              <div class="col-9">
+                                                <div class= "row">
+                                                  <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                                    <div class="col-12">
+                                                      <div class="aos-item__inner">
+                                                        <p align="justify">Es una institución del Estado que tiene por misión garantizar, mantener y restablecer el orden interno, prestar protección y ayuda <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="menu.html#pnp" class="btn btn-primary btn-sm">Leer más</a></p>
+                                                      </div>  
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>    
+                                      </div>
+                                              
+                                            </div>
+                                          </div>          
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <br>
+                                      <div class="container">   
+                                    <div class="row">       
+                                      <div class="col-md">        
+                                          <div class="card">
+                                                      
+                                            <div  class="aos-item__inner" class="card-body">
+                                              <div class="row">
+                                                  <div class="col-3">
+                                                    <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                                                      <div class="aos-item__inner">
+                                                        <br><img src = "img/ministerio.png" width= "80px" style="margin: auto;">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                              <div class="col-9">
+                                                <div class= "row">
+                                                  <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                                    <div class="col-12">
+                                                      <div class="aos-item__inner">
+                                                        <p align="justify">Tienen competencia material según lo dispuesto en el artículo 3 del Decreto Legislativo Nº 1368 que crea el Sistema Nacional Especializado <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="menu.html#dem" class="btn btn-primary btn-sm">Leer más</a></p>
+                                                      </div>  
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>    
+                                      </div>
+                                              
+                                            </div>
+                                          </div>          
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                      <div class="container">   
+                                    <div class="row">       
+                                      <div class="col-md">        
+                                          <div class="card">
+                                                      
+                                            <div  class="aos-item__inner" class="card-body">
+                                              <div class="row">
+                                                  <div class="col-3">
+                                                    <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                                                      <div class="aos-item__inner">
+                                                        <br><img src = "img/poderjudicial.png" width= "80px" style="margin: auto;">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                              <div class="col-9">
+                                                <div class= "row">
+                                                  <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                                    <div class="col-12">
+                                                      <div class="aos-item__inner">
+                                                        <p align="justify">Le corresponde el conocimiento del proceso en función del domicilio de la víctima o del lugar de la agresión.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="menu.html#dem" class="btn btn-primary btn-sm">Leer más</a></p>
+                                                      </div>  
+
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>    
+                                      </div>
+                                              
+                                            </div>
+                                          </div>          
+                                      </div>
+                                    </div>
+                                  </div>
+                                   
+                                <h2 id="dem">DEMUNA  </h4>
+                                  <div>
+                                    <p align="justify"><strong>Es un servicio, que brinda atención especializada y confidencial y que actúa sobre las causas que limitan o evitan el ejercicio de los derechos de las niñas, niños y adolescentes, mediante: </p>
+                                  </div>
+                                <p>
+                                  
+                                    <g id="surface1">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 18.246094 8.304688 L 10.445312 0.503906 C 9.984375 0.0429688 9.242188 0.0507812 8.785156 0.5 C 8.328125 0.960938 8.328125 1.703125 8.785156 2.160156 L 16.585938 9.960938 C 17.042969 10.417969 17.789062 10.417969 18.246094 9.960938 C 18.703125 9.503906 18.703125 8.761719 18.246094 8.304688 Z M 18.246094 8.304688 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 8.207031 3.238281 L 8.148438 3.53125 C 7.734375 5.601562 6.730469 7.566406 5.371094 9.160156 L 9.613281 13.402344 C 11.207031 12.042969 13.144531 11.011719 15.214844 10.597656 L 15.507812 10.539062 Z M 8.207031 3.238281 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4.59375 10.039062 L 1.691406 12.9375 C 1.007812 13.625 1.003906 14.738281 1.691406 15.425781 L 3.347656 17.082031 C 4.035156 17.765625 5.148438 17.769531 5.835938 17.082031 L 8.734375 14.183594 Z M 5.007812 14.597656 C 4.777344 14.824219 4.40625 14.824219 4.179688 14.597656 C 3.949219 14.367188 3.949219 13.996094 4.179688 13.769531 L 5.007812 12.9375 C 5.234375 12.710938 5.605469 12.710938 5.835938 12.9375 C 6.066406 13.167969 6.066406 13.539062 5.835938 13.769531 Z M 5.007812 14.597656 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 11.183594 17.394531 L 11.980469 16.597656 C 12.667969 15.910156 12.664062 14.796875 11.980469 14.109375 L 11.386719 13.519531 C 11.058594 13.738281 10.746094 13.976562 10.445312 14.230469 L 11.152344 14.941406 C 11.378906 15.167969 11.378906 15.535156 11.152344 15.769531 L 10.339844 16.578125 L 9.148438 15.425781 L 7.492188 17.082031 L 10.152344 19.65625 C 10.605469 20.113281 11.351562 20.117188 11.808594 19.65625 C 12.265625 19.199219 12.265625 18.457031 11.808594 18 Z M 11.183594 17.394531 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 13.550781 0 C 13.226562 0 12.964844 0.261719 12.964844 0.585938 L 12.964844 1.757812 C 12.964844 2.082031 13.226562 2.34375 13.550781 2.34375 C 13.875 2.34375 14.136719 2.082031 14.136719 1.757812 L 14.136719 0.585938 C 14.136719 0.261719 13.875 0 13.550781 0 Z M 13.550781 0 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 18.238281 4.6875 L 17.066406 4.6875 C 16.742188 4.6875 16.480469 4.949219 16.480469 5.273438 C 16.480469 5.597656 16.742188 5.859375 17.066406 5.859375 L 18.238281 5.859375 C 18.5625 5.859375 18.824219 5.597656 18.824219 5.273438 C 18.824219 4.949219 18.5625 4.6875 18.238281 4.6875 Z M 18.238281 4.6875 "/>
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 17.480469 1.34375 C 17.25 1.113281 16.878906 1.113281 16.652344 1.34375 L 15.480469 2.515625 C 15.25 2.746094 15.25 3.113281 15.480469 3.34375 C 15.707031 3.574219 16.078125 3.574219 16.308594 3.34375 L 17.480469 2.171875 C 17.707031 1.941406 17.707031 1.574219 17.480469 1.34375 Z M 17.480469 1.34375 "/>
+                                    </g>
+                                    </svg>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <img src = "img/image1.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-12">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>La restitución de sus derechos vulnerado</b></li>
+                                      <li><b>El desarrollo o fortalecimiento de las capacidades en las niñas, niños y adolescentes para su protección integral.</b></li>
+                                      <li><b>El desarrollo de las competencias parentales.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                <div class="col-12">
+                                  <h4 class="first">Servicios que brinda:  </h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <br>
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-12">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ul>
+                                      <li><b>Brinda orientación psicológica, social y legal en casos de: Alimentos, Régimen de Visitas, Tenencia, Filiación, Violencia Psicológica y Física, Violencia Familiar, Violencia Escolar, Adicción, Abuso y Acoso Sexual.</b></li>
+                                      <li><b>Efectúa conciliación extrajudicial especializada, emitiendo actas que constituyen título ejecutivo en materia de alimentos, tenencia y régimen de visitas, siempre que las mismas materias no hayan sido resueltas por instancia judicial.</b></li>
+                                      <li><b>Dispone la apertura de cuentas de consignación de pensión de alimentos derivada de los acuerdos conciliatorios que haya celebrado.</b></li>
+                                      <li><b>Promueve la obtención del Documento Nacional de Identidad, coordinando con el Registro Nacional de Identificación y Estado Civil – RENIEC y las Oficinas de Registro Civil de las Municipalidades.</b></li>
+                                      <li><b>Registra la firma de Actas de Compromiso en orientación y normas de comportamiento de la niña, niño y adolescente.</b></li>
+                                      <li><b>Registra a los Adolescentes Trabajadores del Hogar, que laboran en el Distrito, en el marco de la Ley N° 27571- Artículo 51°</b></li>
+
+                                      <li><b>Realiza talleres de Prevención de la Violencia Familiar y Prácticas de Valores dirigido a la comunidad.</b></li>
+                                      <li><b>Difunde e informa sobre los derechos y deberes de las niñas, niños y adolescentes a través de charlas y talleres de capacitación al personal docente de los colegios.</b></li>
+                                      <li><b>Realiza charlas dinámicas para el fortalecimiento de las relaciones con su familia, y su entorno comunal y social.</b></li>
+                                      <li><b>Brinda información y orientación sobre Riesgos y Peligros en las Nuevas Tecnologías del Internet, Acoso Escolar (Bullying) y Trata de Personas.</b></li>
+                                      <li><b>Realiza programas de prevención y consumo de drogas en adolescentes.</b></li>
+                                      <li><b>Colabora en los procedimientos por riesgo de desprotección familiar a solicitud de la autoridad competente.</b></li>
+                                      <li><b>Comunica y deriva las presuntas faltas, delitos o contravenciones en contra de niñas, niños y adolescentes, a las autoridades competentes (PNP, Fiscalía, UPE)</b></li>
+                                    </ul>
+                              </div>
+                            </div>
+                          </div> 
+                          <!---->
+                                <h2 align="center" id="cem">Centro de Emergencia Mujer  </h4>
+                                 <div class="col-12">
+                                 <div class="aos-item__inner">
+                                    <p align="justify"><strong>Es un servicio, que brinda atención especializada y confidencial y que actúa sobre las causas que limitan o evitan el ejercicio de los derechos de las niñas, niños y adolescentes, mediante: </p>
+                                  </div>
+                                  </div>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br>
+                                <br>
+                                <img src = "img/cem1.png" width= "90px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <p>Se procura la recuperación del daño sufrido y se presta asistencia social. Asimismo, se realizan actividades de prevención a través de capacitaciones, campañas comunicacionales, formación de agentes comunitarios y movilización de organizaciones.</p>
+                                  </div>  
+                                </div>
+                               
+                              </div>
+                            </div>
+                          </div>  
+                           <div class="col-11">
+                                  <h4 class="first">Servicios profesionales que brinda el CEM a las personas afectadas por la violencia familiar y sexual  </h4>
+                                </div> 
+                        </div>
+
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-11">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ol type="1">
+                                      <li><strong>CENTRO DE EMERGENCIAS DE LA MUJER: <br>Su función principal no es recibir denuncias por violencia familiar o abuso sexual, sino asesorar a las mujeres para que sepan cómo hacerlo y brindarles gratuitamente los servicios de un abogado para que puedan llevar el caso al Poder Judicial.
+                                      Lo primero que debes hacer es acercarte a una de sus 245 sedes oficiales mediante comisarías u hospitales. Conócelas aquí.
+                                      Allí conocerás a una persona encargada que anotará tus datos personales y toda la información que le brindes sobre el hecho. Te explicará qué tipo de violencia has sufrido y por qué.
+                                      Puede ser abuso sexual, violencia familiar, física o psicológica. Y, de acuerdo a ello, te dirá que tipo de servicio recibirás por parte del personal del Centro de Emergencias de la Mujer.
+                                      Las puertas de los CEM regulares están abiertas de lunes a viernes desde las 8 de la mañana hasta las 4 y 15 de la tarde. Mientras que 77 CEM que funcionan en las comisarías se encuentran disponibles las 24 horas del día de los 365 días del año.
+                                      Si necesitas información detallada, puedes comunicarte al 419-7269.
+
+                                      </li>
+                                      <li><b><strong>LÍNEA 100: <br>
+                                      es un servicio gratuito de cobertura  nacional a cargo de un equipo de profesionales especializados en  brindar  contención emocional, orientación e información en temas de violencia familiar y abuso sexual, con acceso desde cualquier teléfono fijo, público o celular durante las 24 horas del día.
+                                      </b></li>
+                                      <li><b>CHAT 100: <br>
+                                      Diversos profesionales especializados en información y orientación psicológica ofrecen un servicio personalizado mediante el chat 100.
+                                      Si eres víctima de violencia familiar y sexual o padeces violencia en tu relación de enamoramiento y noviazgo, puedes recibir este servicio gratuito presionando aquí: http://sistemas.pncvfs.gob.pe/contra-la-violencia/.
+                                      Allí mantendrás una conversación confidencial, donde el especialista te explicará cómo prevenir situaciones de riesgo y abuso sexual, físico o psicológico.
+                                      Su horario de atención es de 8 de la mañana a 10 de la noche.
+                                      </b></li>
+                                      <li><b>SERVICIO DE ATENCION URGENTE:  <br>
+                                      A diferencia de los demás programas del MIMP, el Servicio de Atención Urgente brinda acciones inmediatas, pues coordina con un equipo profesional la atención de la víctima en el lugar en el que se encuentra.
+                                      Debido a que su trabajo es instantáneo, el gobierno exige que antes la víctima llame a la línea 100 y que su caso sea reportado por un medio de comunicación.
+                                      También brindan atención psicológica, legal y asistencia social.
+                                      Puedes obtener más información llamando al 419-7260.
+                                      Además de los casos de violencia familiar, abuso sexual y violencia psicológica, el Ministerio de la Mujer y Poblaciones Vulnerables (MIMP) atiende casos de violencia contra niños, niñas y adolescentes mediante el servicio de investigación tutelar
+                                      </b></li>
+                                    </ul>
+                              </div>
+                            </div>
+                          </div> 
+                                
+                        <!--listado del CEM-->
+
+                        <div class="col-11">
+                                  <h4 class="first">LISTADO DE CEM EN LA PROVINCIA DE CUSCO:  </h4>
+                                </div> 
+                        </div>
+
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-12">
+                            <h2 align="center" id="pnp">POLICÍA NACIONAL DEL PERÚ  </h4>
+                                  <div class="col-12">
+                                    <p align="justify">La Policía Nacional del Perú es una institución del Estado que tiene por misión garantizar, mantener y restablecer el orden interno, prestar protección y ayuda a las personas y a la comunidad, garantizar el cumplimiento de las leyes y la seguridad del patrimonio público y privado, prevenir, investigar y combatir la delincuencia; vigilar y controlar las fronteras; con el propósito de defender a la sociedad y a las personas, a fin de permitir su pleno desarrollo, en el marco de una cultura de paz.<br>Policía Nacional del Perú (PNP) es una entidad adscrita a Ministerio del Interior </p>
+                                  </div>
+                                  <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br><br><img src = "img/policia.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <p>Competencias de la PNP</p>
+                                    <ol type="a">
+                                      <li><b>Toda delegación recibe denuncias.</b></li>
+                                      <li><b>Realiza investigaciones preliminares. Parte o atestado.</b></li>
+                                      <li><b>En flagrante delito o de muy grave peligro de perpetración, facultado para allanar el domicilio y detener al agresor.</b></li>
+                                      <li><b>Podrá conducir de agrado o fuerza al denunciado para el esclarecimiento de los hechos.</b></li>
+                                      <li><b>Remite el atestado al Juez de Paz, Fiscal penal o de Familia.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                          </div> 
+                        </div>
+
+                       <div class="row" style="text-align: justify;">
+                          <div class="col-12">
+                            <h2 align="center">MINISTERIO PÚBLICO  </h4>
+                                 <p align="left">Competencias de la Fiscalía Provincial de Familia: </p>
+                                  <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br><br><br><br><br><img src = "img/ministerio.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    
+                                    <ul>
+                                      <li><b>El Fiscal Provincial de Familia, da trámite a las peticiones de las víctimas, familiares, PNP, o de oficio.</b></li>
+                                      <li><b>Dicta las medidas de protección: Retiro del agresor del domicilio. Impedimento de acoso a la víctima. Suspensión temporal de visitas. Inventarios sobre sus bienes. Otras medidas. </b></li>
+                                      <li><b>Formula demanda y pone en conocimiento del Juez de familia las medidas de protección adecuadas.</b></li>
+                                      <li><b>Solicitará las medidas cautelares (medida anticipada fuera de proceso) al Juez de Familia – alimentos.</b></li>
+                                      <li><b>Visitar periódicamente delegaciones policiales para conocer denuncias sobre violencia familiar e intervenir de oficio.</b></li>
+                                    </ul>
+                                  </div>  
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                          </div> 
+                        </div>
+                        <div class="col-12">
+                        <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                            <p align="justify">Las Fiscalías Especializadas tienen competencia material según lo dispuesto en el artículo 3 del Decreto Legislativo Nº 1368 que crea el Sistema Nacional Especializado de Justicia para la Protección y Sanción de la Violencia contra las Mujeres e Integrantes del Grupo Familiar. Las Fiscalías Especializadas son competentes para conocer las denuncias penales, por la presunta comisión de los siguientes delitos: </p>
+                         </div>
+                       </div>
+                     </div>
+                         <div class="row" style="text-align: justify;">
+                          <div class="col-11">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ul>
+                                      <li><b>Feminicidio, previsto en el artículo 108-B del Código Penal.</b>
+                                      </li>
+                                      <li><b>Lesiones, previstos en los artículos 121-B, 122, 122-B, en concordancia con el artículo 124-B del Código Penal, cuando la víctima es una mujer agredida por su condición de tal, niños, niñas o adolescentes.
+                                      </b></li>
+                                      <li><b>Violación sexual, previstos en los artículos 170, 171, 172, 173, 173-A y 174, y sus formas agravadas comprendidas en el artículo 177 del Código Penal cuando la víctima es una mujer agredida por su condición de tal, o niños, niñas o adolescentes.
+                                      </b></li>
+                                      <li><b>Actos contra el pudor en menores, previsto en el artículo 176-A del Código Penal.
+                                      </b></li>
+                                    </ul>
+                              </div>
+                              <div class="col-12">
+                        <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                            <p >Del mismo modo, las Fiscalías Especializadas son competentes para conocer los actos de acoso, en todas sus modalidades, incluidos el acoso sexual y chantaje sexual; así como la difusión de imágenes, materiales audiovisuales o audios con contenido sexual, conforme a lo previsto en el Decreto Legislativo Nº 1410</p>
+                         </div>
+                       </div>
+                     </div>
+                            </div>
+                          </div> 
+
+                          <div class="col-12">
+                            <h2 align="center">MINISTERIO DE JUSTICIA  </h4>
+                                 <p align="left">Juez Especializado en Familia:  </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                    <div class="col-3">
+                                        <img src = "img/image3.png" width= "80px" style="margin: auto;">
+                                        <img src = "img/poderjudicial.png" width= "80px" style="margin: auto;">
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>Le corresponde el conocimiento del proceso en función del domicilio de la víctima o del lugar de la agresión.</b></li>
+                                      <li><b>Las pretensiones se tramitan como proceso único.</b></li>
+                                      <li><b>La Resolución Judicial, pone fin al proceso: Determina si ha existido o no VF. Establece las medidas de protección Suspensión temporal de la cohabitación. Salida temporal del agresor del domicilio. Prohibición temporal de visitas. Prohibición de cualquier forma de acoso a la víctima. El tratamiento que debe recibir la víctima, su familia y el agresor. La reparación del daño. Establecimiento de una pensión de alimentos</b></li>
+                                      <li><b>En caso de incumplimiento ejerce facultades coercitivas.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <p align="left">Intervención del Juez penal  </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                    <div class="col-3">
+                                        <br><br><br><br><img src = "img/juez.png" width= "80px" style="margin: auto;">  
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>Tipificados los hechos como delitos, dicta las medidas cautelares, así como disponer la detención del encausado, según la gravedad.</b></li>
+                                      <li><b>Adopta todas las medidas de protección.</b></li>
+                                      <li><b>La Resolución Judicial, pone fin al proceso: Determina si ha existido o no VF. Establece las medidas de protección Suspensión temporal de la cohabitación. Salida temporal del agresor del domicilio. Prohibición temporal de visitas. Prohibición de cualquier forma de acoso a la víctima. El tratamiento que debe recibir la víctima, su familia y el agresor. La reparación del daño. Establecimiento de una pensión de alimentos</b></li>
+                                      <li><b>En caso de incumplimiento ejerce facultades coercitivas.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <p align="left">Disposiciones comunes  </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                    <div class="col-3">
+                                        <br><br><img src = "img/disp.png" width= "80px" style="margin: auto;">  
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>El proceso se mantendrá en reserva.</b></li>
+                                      <li><b>Todas las instituciones públicas y privadas, tienen el deber de colaborar para la evaluación física y psicológica y asistencia de víctimas y su familia.</b></li>
+                                      <li><b>Los certificados de salud, física y mental, que expidan los establecimientos de salud, tienen valor probatorio y son gratuitos.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                      
+                        <div class="row" style="text-align: center;"> 
+                          <div id= "denuncia" class="col-12">
+                            <div class="item2 numberCircle">2</div>
+                            <h4 class="second">¿Dónde se denuncia?</h4>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <a href="tel: +51 984859182"><img  width="60px"  src="img/cem2.png"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <a href="tel: +51 984859182"><img  width="80px"  src="img/ch100.png"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <img src = "img/l100.png" width= "60px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <img src = "img/l100.png" width= "60px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ul>
+                                      <li><b>Comisaría PNP del distrito</b></li>
+                                      <li><b>Ministerio público. En la fiscalía especializada en delitos contra la mujer y los integrantes del grupo familiar.</b></li>
+                                      <li><b>Poder Judicial. En el juzgado mixto de ser posible.</b></li>
+                                      <li><b>También llamando a <a href="tel:100"><img src = "img/linea100.png" width= "50px" style="margin: auto;"></a> ó <a href="tel:1810"><img src = "img/linea1810.png" width= "40px" style="margin: auto;"></a></b></li>
+                                    </ul>
+
+
+              
+                                  </div>  
+                                </div>
+                                <div class="col-11">
+                                  <div class="itemsecond aos-item__inner">
+                                    <p><b>Se notifica a la víctima, el denunciado y a la<br> Comisaría PNP, por los medios electrónicos mas rápidos.</b></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>   
+                        </div>
+                        
+                        <br>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="col-2" style="float: left;">
+                                  <div class="aos-item__inner">
+                                    <div class="item2 numberCircle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15pt" height="15pt" viewBox="0 0 15 15" version="1.1">
+                                      <g id="surface1">
+                                      <path style=" stroke:none;fill-rule:nonzero;fill:rgb(255,255,255);fill-opacity:1;" d="M 14.6875 7.011719 L 0.761719 0.585938 C 0.539062 0.484375 0.273438 0.542969 0.121094 0.734375 C -0.0351562 0.925781 -0.0390625 1.195312 0.109375 1.390625 L 4.6875 7.5 L 0.109375 13.605469 C -0.0390625 13.800781 -0.0351562 14.074219 0.121094 14.265625 C 0.222656 14.394531 0.378906 14.464844 0.535156 14.464844 C 0.613281 14.464844 0.6875 14.449219 0.761719 14.414062 L 14.6875 7.984375 C 14.878906 7.898438 15 7.707031 15 7.5 C 15 7.289062 14.878906 7.101562 14.6875 7.011719 Z M 14.6875 7.011719 "/>
+                                      </g>
+                                      </svg></div>
+                                  </div>  
+                                </div>
+                                <div class="col-9" style="float: left;">
+                                  <div class="aos-item__inner">
+                                    <p><b>Recepcionada la denuncia, se llena la Ficha de Valoracion de Riesgo se comunica inmediatamente al Juzgado Mixto de Urcos, para dictar medidas de protección dentro de las 24 horas, sin necesidad de Audiencia.</b></p>
+                                    <p><b>También se dispone el Reconocimiento médico en: Medicina Legal o el Centro de Salud.</b></p>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>  
+                        </div>
+                        <br>
+
+
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="item3 numberCircle">3</div>
+                            <h4 class="third">El juzgado mixto dicta</h4>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <img src = "img/image3.png" width= "80px" style="margin: auto;">
+                            <img src = "img/poderjudicial.png" width= "80px" style="margin: auto;">
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="col-10">
+                                  <div class="aos-item__inner">
+                                    <ul>
+                                      <li><b>Medidas de protección (Velar por la integridad física y psicológica)</b></li>
+                                      <li><b>Medidas Cautealres (pensión de alimentos - provisionalmente ; Tenencia de menor y Régimen de visitas, etc.)</b></li>
+                                    </ul>
+                                  </div>  
+                                </div>
+                                <div class="col-12">
+                                  <div class="itemthird aos-item__inner">
+                                    <p><b>La PNP se encarga de hacer cumplir las medidas de protección, en coordinación con las organizaciones comunales y otros.</b></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <br>
+                        <div id= "intervienen" class="row">
+                          <div class="col-12">
+                            <div class="item4 numberCircle">4</div>
+                            <h4 class="fourth">SENSIBILIZÍZATE</h4>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <br><br>
+                            <img src = "img/yt.png" width= "60px" style="margin: auto;">
+                            <br><br><br><br><br><br>
+                            <img src = "img/yt.png" width= "60px" style="margin: auto;">
+                            <br><br><br><br><br><br>
+                            <img src = "img/yt.png" width= "60px" style="margin: auto;">
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="col-12">
+                                  <div class="aos-item__inner">
+                                      <div class="contenedor-caja-video">
+                                      <div class="caja-video">
+                                      <iframe class="video" src="https://www.youtube.com/embed/23DxCqyszt0"></iframe>
+                                      </div>
+                                      </div>
+                                      <br><br><br>
+                                      <div class="contenedor-caja-video">
+                                      <div class="caja-video">
+                                      <iframe class="video" src="https://www.youtube.com/embed/aZFFpuhHoy0"></iframe>
+                                      </div>
+                                      </div>
+                                      <br><br>
+                                      <div class="contenedor-caja-video">
+                                      <div class="caja-video">
+                                      <iframe class="video" src="https://www.youtube.com/embed/aZFFpuhHoy0"></iframe>
+                                      </div>
+                                      </div>
+                                   </div>  
+                                </div>
+                                <div class="col-12">
+                                  <div class="itemfourth aos-item__inner">
+                                    <p>FUENTE: Canal de Youtube Guaman Poma de Ayala</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <br>
+
+                        <div class="col-12">
+                          <a onclick='geo()' id = "menu" type="button" class="btn btn-primary btn-lg btn-block buttonmenu" style="color:white !important;">BUSCA AYUDA</a>
+                      </div>
+                        
+                        <br>
+                        <div class=" violencia-item row">
+                          <div class="col-12">
+                            <h4 class="titulo">Tipos de Violencia</h4>
+                          </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-12">
+                            <div class= " row">
+                              <div class="violencia-item aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="item5 col-6">
+                                  <div class=" aos-item__inner">
+                                    <p style="color: red;"><b>Física:</b></p>
+                                    <p><b>(Golpes, empujones, jalones, cortes, patadas entre otros)</b></p>
+                                  </div>  
+                                </div>
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <svg version="1.0" xmlns="http://www.w3.org/1000/svg"
+                                      width="80.000000pt" height="80.000000pt" viewBox="0 0 256.000000 256.000000"
+                                      preserveAspectRatio="xMidYMid meet">
+
+                                      <g transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
+                                      fill="#000000" stroke="none">
+                                      <path d="M659 2545 c-31 -17 -54 -66 -45 -97 3 -14 -3 -40 -15 -64 -24 -51
+                                      -18 -85 23 -119 31 -26 76 -32 108 -15 16 9 23 3 47 -40 47 -84 48 -56 1 33
+                                      -24 45 -48 80 -53 77 -6 -3 -9 -8 -7 -12 9 -28 4 -33 -29 -36 -30 -3 -41 2
+                                      -58 24 -24 31 -27 62 -7 90 8 11 12 30 9 46 -4 21 1 34 25 58 17 17 41 30 55
+                                      30 33 0 77 -36 77 -63 1 -22 1 -22 15 -3 15 20 15 20 43 -1 36 -27 42 -83 13
+                                      -112 -27 -27 -47 -27 -54 0 -3 12 -10 18 -16 15 -6 -4 -5 -21 4 -49 8 -23 19
+                                      -61 25 -84 6 -24 15 -43 20 -43 5 0 5 14 0 33 -21 82 -21 87 -4 87 8 0 29 13
+                                      45 29 53 54 29 138 -45 157 -15 3 -41 21 -60 40 -37 37 -73 43 -117 19z"/>
+                                      <path d="M401 2178 c18 -66 96 -100 145 -63 17 13 15 14 -27 9 -58 -8 -84 6
+                                      -99 51 -15 44 -32 46 -19 3z"/>
+                                      <path d="M355 2185 c26 -72 17 -107 -32 -131 -30 -14 -34 -19 -19 -22 10 -2
+                                      30 5 45 16 46 34 53 91 16 137 l-17 20 7 -20z"/>
+                                      <path d="M530 2073 c-32 -12 -60 -47 -60 -75 0 -30 28 -94 37 -85 2 3 -1 15
+                                      -7 27 -6 11 -10 38 -8 58 2 31 9 40 36 54 19 9 36 19 39 22 8 7 -16 7 -37 -1z"/>
+                                      <path d="M785 2041 c-47 -22 -99 -74 -114 -114 -6 -16 -11 -53 -11 -83 0 -120
+                                      89 -207 211 -207 181 0 276 214 156 350 -61 69 -161 92 -242 54z m85 -212 c65
+                                      -15 110 -39 110 -59 0 -9 -5 -31 -11 -48 -10 -29 -12 -30 -32 -17 -30 20 -144
+                                      48 -159 39 -15 -9 -4 62 13 82 14 17 20 17 79 3z"/>
+                                      <path d="M314 1994 c-18 -15 -18 -15 6 -10 14 3 34 8 45 12 28 7 72 -29 80
+                                      -66 4 -17 11 -30 15 -30 18 0 -18 88 -41 100 -27 15 -83 12 -105 -6z"/>
+                                      <path d="M1442 1873 c-21 -32 -76 -118 -121 -190 -46 -73 -85 -133 -86 -133
+                                      -2 0 -53 22 -115 50 l-112 50 -61 -21 c-69 -23 -124 -21 -180 7 -41 21 -85 62
+                                      -103 96 -19 37 -121 56 -218 39 -130 -23 -319 -110 -336 -156 -6 -16 -1 -69
+                                      15 -162 12 -76 22 -139 20 -141 -2 -2 -21 8 -44 22 -50 32 -55 32 -68 3 -10
+                                      -22 -6 -26 58 -62 52 -29 70 -45 74 -66 10 -44 38 -63 86 -56 40 5 59 -4 476
+                                      -245 360 -208 436 -248 448 -238 8 7 15 18 15 24 0 7 -198 126 -440 266 -389
+                                      225 -440 257 -440 279 0 22 -34 237 -45 288 -4 18 5 25 68 51 90 37 137 48
+                                      137 32 0 -7 -23 -100 -52 -207 -42 -162 -49 -197 -37 -204 228 -134 545 -315
+                                      548 -313 1 1 -15 28 -38 60 -23 31 -41 64 -41 71 0 11 110 437 123 475 1 4 62
+                                      -20 136 -52 135 -61 175 -70 203 -47 18 14 218 332 218 346 0 5 -16 23 -36 39
+                                      l-36 30 27 46 c26 44 28 76 6 76 -6 0 -28 -26 -49 -57z"/>
+                                      <path d="M2234 1586 c-21 -21 -34 -44 -34 -60 0 -14 2 -26 4 -26 3 0 32 16 65
+                                      36 62 37 71 50 49 72 -21 21 -49 13 -84 -22z"/>
+                                      <path d="M2380 1498 c-18 -13 -40 -34 -49 -47 l-16 -24 34 6 c18 4 55 7 80 7
+                                      26 0 56 6 66 14 17 12 18 18 7 40 -10 21 -18 26 -50 26 -24 0 -52 -9 -72 -22z"/>
+                                      <path d="M1935 1471 c-69 -32 -115 -102 -115 -176 l0 -35 84 0 c47 0 95 -4
+                                      108 -9 19 -7 29 -4 47 15 13 13 32 24 42 24 10 0 28 9 39 20 11 11 34 23 50
+                                      27 35 6 34 6 16 41 -19 37 -75 89 -109 101 -43 17 -117 13 -162 -8z m55 -105
+                                      c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20 38 20 54 2z"/>
+                                      <path d="M2343 1323 c-8 -6 14 -27 69 -67 90 -65 113 -67 113 -6 0 46 -38 73
+                                      -112 77 -32 2 -63 0 -70 -4z"/>
+                                      <path d="M2172 1308 c-31 -15 -38 -53 -18 -94 18 -39 24 -224 6 -224 -5 0 -10
+                                      26 -11 58 l-1 57 -24 -73 c-26 -80 -24 -114 8 -136 28 -20 15 -34 -37 -42 -60
+                                      -8 -109 2 -142 30 -34 29 -36 90 -5 160 18 39 19 47 6 42 -8 -3 -24 -1 -35 5
+                                      -30 16 -152 -19 -292 -82 l-117 -54 -75 -150 c-69 -137 -135 -312 -135 -354 0
+                                      -16 74 -51 109 -51 7 0 69 32 136 70 130 75 173 85 225 55 14 -8 28 -14 31
+                                      -15 4 0 25 29 48 64 44 67 78 90 132 88 63 -2 116 -66 106 -128 -3 -18 -31
+                                      -70 -61 -116 -31 -45 -52 -84 -46 -86 18 -6 113 18 171 44 l58 26 -29 52 c-35
+                                      63 -58 148 -65 246 -3 41 -8 87 -10 103 -3 15 0 27 5 27 6 0 10 -15 10 -34 0
+                                      -42 41 -80 74 -70 54 16 77 80 97 265 18 163 -9 291 -67 318 -14 6 -26 11 -27
+                                      10 -1 0 -12 -5 -25 -11z"/>
+                                      <path d="M1729 1270 c-72 -12 -155 -59 -230 -128 -76 -70 -90 -99 -65 -136 27
+                                      -43 49 -41 164 12 199 93 286 111 408 88 48 -10 74 9 74 53 0 51 -61 81 -165
+                                      81 -66 0 -194 -29 -244 -55 -17 -8 -31 -11 -31 -6 0 16 24 29 93 51 37 12 66
+                                      27 64 33 -5 15 -15 16 -68 7z"/>
+                                      <path d="M330 1078 c0 -11 21 -100 46 -197 l46 -177 -148 -224 c-81 -124 -152
+                                      -239 -157 -257 -28 -89 88 -177 170 -128 29 17 356 501 375 555 7 21 2 55 -21
+                                      146 -16 65 -28 120 -27 122 2 1 44 -54 93 -122 l89 -126 -42 -222 c-47 -244
+                                      -52 -302 -28 -336 18 -26 65 -52 94 -52 36 0 90 31 104 59 8 14 37 149 66 300
+                                      42 226 49 276 38 286 -19 18 -676 395 -688 395 -5 0 -10 -10 -10 -22z"/>
+                                      <path d="M1919 627 c-21 -17 -326 -468 -339 -502 -31 -81 68 -158 138 -109 28
+                                      19 339 482 347 517 8 29 -17 82 -44 97 -26 14 -82 12 -102 -3z"/>
+                                      <path d="M1422 377 c-138 -79 -259 -152 -267 -163 -23 -31 -19 -87 10 -118 45
+                                      -48 76 -39 298 85 l198 111 60 89 c32 48 59 92 59 97 0 5 -8 16 -18 25 -40 36
+                                      -76 23 -340 -126z"/>
+                                      </g>
+                                      </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class= "row">
+                              <div class="violencia-item  aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <p style="color: red;"><b>Psicológica:</b></p>
+                                    <p><b>(insultos, amenazas, gritos, burlas en público)</b></p>
+                                     
+                                  </div>  
+                                </div>
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <svg version="1.0" xmlns="http://www.w3.org/1000/svg"
+                                      width="100.000000pt" height="100.000000pt" viewBox="0 0 500.000000 380.000000"
+                                      preserveAspectRatio="xMidYMid meet">
+
+                                      <g transform="translate(-110.000000,370.000000) scale(0.100000,-0.100000)"
+                                      fill="#000000" stroke="none">
+                                      <path d="M1892 3718 c-6 -6 -12 -15 -12 -18 0 -4 28 -65 61 -136 l61 -129 39
+                                      44 c26 29 40 39 44 30 2 -8 21 -59 40 -113 41 -114 50 -132 58 -119 6 9 -67
+                                      300 -78 311 -3 3 -23 -12 -45 -33 -22 -21 -42 -37 -44 -34 -3 3 -22 49 -44
+                                      104 -38 98 -55 118 -80 93z"/>
+                                      <path d="M4137 3627 c-17 -12 -18 -21 -8 -105 11 -101 15 -112 37 -112 12 0
+                                      15 17 13 100 -2 110 -12 139 -42 117z"/>
+                                      <path d="M2702 3558 c-26 -19 -277 -325 -739 -902 -77 -96 -90 -130 -69 -180
+                                      20 -48 61 -76 111 -76 67 0 21 -50 571 630 157 195 293 370 301 389 12 28 12
+                                      40 1 74 -25 78 -113 110 -176 65z"/>
+                                      <path d="M3925 3540 c-22 -5 -50 -6 -62 -3 -16 4 -31 -4 -53 -26 -27 -26 -31
+                                      -37 -28 -72 3 -47 22 -65 59 -56 32 8 63 61 55 93 -5 19 -3 24 14 24 25 0 25
+                                      -3 -5 -97 -25 -78 -33 -173 -15 -173 14 0 27 29 38 90 6 30 22 91 36 135 14
+                                      44 26 83 26 87 0 9 -10 9 -65 -2z m-67 -94 c-2 -11 -11 -22 -20 -24 -14 -3
+                                      -18 3 -18 26 0 16 3 32 7 35 11 12 34 -15 31 -37z"/>
+                                      <path d="M1533 3504 c-17 -26 -16 -28 2 -41 76 -56 261 -183 266 -183 3 0 12
+                                      27 19 60 7 33 15 60 17 60 3 0 33 -24 66 -53 138 -118 175 -148 181 -139 7 12
+                                      -255 285 -264 275 -4 -4 -15 -33 -25 -63 -10 -30 -19 -57 -21 -59 -1 -2 -50
+                                      36 -107 83 -58 47 -108 86 -111 86 -3 0 -13 -12 -23 -26z"/>
+                                      <path d="M3623 3492 c-7 -4 -13 -32 -15 -62 -3 -47 -6 -55 -23 -58 -17 -2 -21
+                                      3 -20 25 0 43 -27 35 -40 -11 -9 -32 -20 -43 -58 -63 -27 -13 -45 -28 -41 -34
+                                      6 -11 44 -8 77 6 13 6 17 2 17 -18 0 -19 -7 -27 -27 -32 -61 -15 -73 -51 -14
+                                      -41 36 5 39 4 39 -19 0 -14 2 -29 6 -32 10 -11 36 19 36 43 0 13 9 28 19 34
+                                      16 8 21 5 30 -21 12 -35 35 -34 38 2 0 13 1 31 2 40 1 11 17 21 46 29 33 9 45
+                                      17 43 29 -4 16 -25 18 -65 6 -20 -6 -23 -4 -23 18 0 21 7 28 43 39 25 9 43 22
+                                      46 33 2 15 -2 17 -25 12 -16 -3 -37 -9 -46 -12 -16 -6 -18 -1 -18 38 0 47 -8
+                                      61 -27 49z m-13 -175 c0 -43 -43 -65 -53 -27 -3 13 2 25 16 35 29 21 37 19 37
+                                      -8z"/>
+                                      <path d="M3985 3390 c-20 -32 -24 -75 -10 -97 20 -30 46 -29 84 3 37 31 42 77
+                                      12 94 -25 13 -78 13 -86 0z m65 -43 c0 -14 -20 -37 -32 -37 -4 0 -8 11 -8 25
+                                      0 18 5 25 20 25 11 0 20 -6 20 -13z"/>
+                                      <path d="M3194 3380 c-78 -31 -140 -202 -101 -280 16 -33 72 -60 122 -60 72 0
+                                      195 71 195 112 0 27 -17 22 -63 -17 -49 -42 -102 -60 -150 -51 -52 10 -72 38
+                                      -71 100 2 63 21 102 69 145 44 38 75 35 123 -15 37 -39 40 -63 12 -89 -20 -18
+                                      -20 -17 -20 16 0 27 -6 37 -27 47 -15 6 -35 12 -44 12 -44 0 -98 -121 -69
+                                      -155 18 -21 63 -18 94 6 14 11 30 18 36 14 16 -10 65 22 78 50 24 51 7 102
+                                      -48 149 -33 27 -91 34 -136 16z m49 -192 c-9 -10 -20 -18 -26 -18 -12 0 -1 58
+                                      15 78 10 12 13 10 20 -14 5 -20 3 -33 -9 -46z"/>
+                                      <path d="M4154 3344 c-9 -36 14 -50 40 -24 16 16 17 22 6 34 -19 24 -39 19
+                                      -46 -10z"/>
+                                      <path d="M4830 3330 c-261 -122 -181 -510 105 -510 271 1 364 359 128 497 -63
+                                      37 -169 43 -233 13z"/>
+                                      <path d="M1764 3132 l7 -60 -63 14 c-35 8 -79 19 -98 24 -60 17 -72 13 -68
+                                      -17 3 -28 4 -28 138 -49 74 -12 137 -20 138 -19 2 2 -1 25 -6 52 -6 26 -10 49
+                                      -8 50 1 1 40 -8 86 -21 113 -31 168 -40 155 -27 -9 9 -163 71 -225 91 -14 4
+                                      -34 11 -44 16 -18 7 -19 4 -12 -54z"/>
+                                      <path d="M2668 3093 c-30 -38 -123 -153 -207 -257 l-153 -188 22 -23 c12 -13
+                                      49 -38 83 -57 57 -30 69 -33 152 -33 82 0 97 3 157 33 119 58 182 161 182 297
+                                      1 71 -3 88 -32 147 -32 65 -109 148 -137 148 -7 0 -37 -30 -67 -67z"/>
+                                      <path d="M1907 2779 c-97 -23 -176 -84 -293 -229 -124 -154 -198 -283 -268
+                                      -472 -102 -275 -87 -386 67 -498 50 -37 256 -229 454 -424 l53 -51 -80 -315
+                                      c-124 -488 -123 -484 -116 -535 12 -80 101 -154 184 -155 66 0 148 52 171 109
+                                      6 14 63 233 126 486 124 492 125 498 82 566 -12 19 -127 136 -255 259 -189
+                                      183 -231 228 -226 245 22 76 115 242 305 543 91 143 135 232 116 232 -3 0 -31
+                                      -32 -62 -71 -87 -108 -158 -131 -243 -79 -35 21 -72 86 -72 125 0 43 24 86 98
+                                      177 40 48 72 89 72 92 0 9 -69 5 -113 -5z"/>
+                                      <path d="M4885 2740 c-254 -6 -270 -9 -350 -75 -72 -58 -98 -113 -170 -350
+                                      -36 -121 -84 -276 -105 -345 -81 -266 -83 -275 -70 -314 6 -20 23 -45 37 -56
+                                      34 -27 102 -27 136 0 29 23 35 39 142 405 104 354 106 359 133 363 29 4 28 -6
+                                      -4 -115 -42 -145 -171 -591 -249 -860 l-72 -253 163 0 163 0 3 -482 c3 -550 1
+                                      -532 83 -563 42 -17 48 -17 89 -1 79 30 75 5 78 553 l3 488 37 3 37 3 3 -495
+                                      3 -494 24 -26 c53 -56 140 -56 192 0 l24 26 3 494 3 494 165 0 c153 0 165 1
+                                      160 18 -8 27 -55 185 -91 312 -18 63 -49 169 -68 235 -20 66 -66 224 -102 350
+                                      -37 127 -71 243 -76 260 -14 48 -12 57 17 53 30 -3 23 16 173 -493 62 -208 75
+                                      -244 101 -267 70 -64 180 -14 180 83 0 32 -50 204 -182 628 -45 144 -80 240
+                                      -98 266 -59 85 -143 139 -238 153 -26 4 -150 5 -277 2z"/>
+                                      </g>
+                                      </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class= "row">
+                              <div class="violencia-item aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <p style="color: red;"><b>Sexual:</b></p>
+                                    <p><b>(Violación y acoso sexual, tocamientos indebidos, compartir videos y fotos con contenido sexual, entre otros) </b></p>
+                                     
+                                  </div>  
+                                </div>
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <svg version="1.0" xmlns="http://www.w3.org/1000/svg"
+                                      width="70.000000pt" height="70.000000pt" viewBox="0 0 200.000000 200.000000"
+                                      preserveAspectRatio="xMidYMid meet">
+
+                                      <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+                                      fill="#000000" stroke="none">
+                                      <path d="M1694 1981 c-107 -49 -138 -190 -61 -278 78 -88 205 -85 280 9 69 87
+                                      35 222 -67 269 -52 24 -100 24 -152 0z"/>
+                                      <path d="M920 1949 c-78 -32 -129 -107 -130 -192 0 -129 127 -230 248 -197
+                                      192 51 212 309 30 384 -42 18 -110 20 -148 5z"/>
+                                      <path d="M1615 1605 c-22 -8 -52 -29 -68 -47 -42 -49 -49 -89 -33 -188 22
+                                      -138 10 -187 -113 -464 -39 -88 -70 -164 -68 -169 2 -6 63 -27 137 -47 l134
+                                      -37 125 40 c69 21 130 42 134 47 10 9 -89 209 -142 288 -51 75 -65 104 -89
+                                      182 -40 129 -40 282 -1 321 25 25 81 25 102 1 13 -15 17 -39 17 -111 0 -167
+                                      30 -221 82 -148 71 100 -21 321 -142 341 -20 3 -52 0 -75 -9z"/>
+                                      <path d="M573 1576 c-103 -49 -193 -157 -283 -335 -57 -114 -120 -279 -120
+                                      -313 0 -54 70 -89 112 -55 9 6 40 72 68 144 29 73 72 167 96 208 48 85 117
+                                      180 122 167 1 -4 -115 -288 -258 -631 -143 -342 -260 -634 -260 -649 0 -97
+                                      129 -145 194 -73 11 13 168 379 333 778 3 8 11 9 26 2 29 -13 174 -343 160
+                                      -361 -5 -7 -55 -71 -110 -143 -116 -151 -123 -162 -123 -208 0 -95 126 -140
+                                      192 -69 73 78 289 370 294 399 5 25 -9 66 -71 207 l-78 176 54 130 53 131 27
+                                      -133 c30 -156 73 -301 94 -322 8 -8 15 -19 15 -24 0 -10 180 -112 197 -112 9
+                                      0 63 100 63 117 0 7 -35 30 -79 53 l-78 41 -23 76 c-50 169 -71 302 -76 472
+                                      -2 97 -8 169 -14 176 -6 8 -93 48 -193 91 -214 91 -255 98 -334 60z m755 -961
+                                      c5 -4 -44 -85 -52 -85 -5 0 -32 14 -61 30 l-53 31 25 44 24 44 57 -31 c31 -17
+                                      58 -32 60 -33z m-154 24 c-3 -5 -10 -7 -15 -3 -5 3 -7 10 -3 15 3 5 10 7 15 3
+                                      5 -3 7 -10 3 -15z"/>
+                                      <path d="M1660 1527 c-29 -15 -38 -42 -39 -125 -2 -157 64 -321 182 -449 43
+                                      -47 82 -56 111 -27 27 26 18 52 -39 114 -98 107 -147 236 -143 375 1 45 -2 86
+                                      -6 93 -14 23 -41 31 -66 19z"/>
+                                      <path d="M1637 645 c-27 -10 -45 -11 -63 -5 -58 22 -55 36 -52 -291 l3 -301
+                                      28 -24 c41 -35 100 -29 134 15 18 23 18 621 1 620 -7 0 -30 -7 -51 -14z"/>
+                                      </g>
+                                      </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class= "row">
+                              <div class="violencia-item aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    <p style="color: red;"><b>Económica o patrimonial:</b></p>
+                                    <p><b>(Robo, destrucción o retención de objetos, bienes y documentos importantes, incumplimiento de las obligaciones alimentarias entre otros)</b></p>
+                                     
+                                  </div>  
+                                </div>
+                                <div class="item5 col-6">
+                                  <div class="aos-item__inner">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+          </div>
+            
+            
+              <div class= "footer">
+                
+              </div>
+
+              
+          
+            
+              
+              <script>
+                AOS.init({
+                  easing: 'ease-in-out-sine'
+                });
+              </script>
+ 
+
+              <script>
+                var latitude = "";
+                var longitude = "";
+
+
+                function geo(){
+                  position();
+                  }
+
+               
+                    
+                var onSuccess = function(position) {
+                latitude = position.coords.latitude;
+              longitude = position.coords.longitude;
+                
+              window.location.href = 'https://www.google.com/maps/d/u/3/edit?mid=1So9IvGMoUBhqwdeu70f3VgWI8jaK6cj0&usp=sharing =es ='+latitude+'%2C'+longitude+'&z=17'; 
+                
+              
+                
+                };
+            
+                function onError(error) {
+                    alert('Código: '+ error.code+ '\n' + 'Mensaje: ' + error.message + '\n');
+                }
+                
+                   
+                function position(){
+                var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError,{ enableHighAccuracy: true });
+                     
+                }        
+            </script>
+      
+            
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--menu-->
+     <!-- Include jQuery -->
+    <script src="javascripts/jquery.js"></script>
+    <!-- Include the Sidr JS -->
+    <script src="js/sidr/jquery.sidr.min.js"></script>
+    
+    
+
+    
+  </body>
+</html>

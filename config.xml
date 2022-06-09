@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.notecalles" version="4.0.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>¡NO TE CALLES!</name>
+    <description>
+        VIOLENCIA
+    </description>
+    <author email="informatica@guamanpoma.org">
+        Guaman Poma de Ayala
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />   
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="android">    
+    	<icon src="assets/mipmap-mdpi/ic_launcher.png" density="mdpi" />
+    	<icon src="assets/mipmap-hdpi/ic_launcher.png" density="hdpi" />
+    	<icon src="assets/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
+    	<icon src="assets/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
+    	<icon src="assets/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
+	    <preference name="android-minSdkVersion" value="22" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="android">
+        <splash src="assets/drawable-land-hdpi/screen.png" density="land-hdpi"/>
+        <splash src="assets/drawable-land-ldpi/screen.png" density="land-ldpi"/>
+        <splash src="assets/drawable-land-mdpi/screen.png" density="land-mdpi"/>
+        <splash src="assets/drawable-land-xhdpi/screen.png" density="land-xhdpi"/>
+
+        <splash src="assets/drawable-port-hdpi/screen.png" density="port-hdpi"/>
+        <splash src="assets/drawable-port-ldpi/screen.png" density="port-ldpi"/>
+        <splash src="assets/drawable-port-mdpi/screen.png" density="port-mdpi"/>
+        <splash src="assets/drawable-port-xhdpi/screen.png" density="port-xhdpi"/>
+
+    </platform>
+    <engine name="android" spec="~5.1.1" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" /> 
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+</widget>

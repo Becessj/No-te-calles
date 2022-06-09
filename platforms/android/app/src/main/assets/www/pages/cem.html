@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+     <link href="../css/overlay.css" rel="stylesheet">
+     <link rel="stylesheet" href="../dist/aos.css" />
+     <script src="../dist/aos.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type='text/javascript'>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+</script>
+ 
+  <style type='text/css'>
+    * ,*::after, *::before{
+ box-sizing:border-box;
+}
+
+
+.wrap {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+.contenedor-caja-video{
+ width: 80%;
+}
+
+.caja-video  {
+ position:relative;
+ background-color:red;
+  width: 100%;
+ padding-bottom:56.25%;
+ 
+}
+
+.caja-video::before {
+ position: absolute;
+ content:'';
+ 
+ display:block;
+ padding-bottom:56.25%;
+}
+
+.video{
+ position:absolute;
+ width: 100%;
+ height: 100%;
+ 
+}
+
+    @font-face {
+      font-family: "Learners";
+      src: url("../font/Letters for Learners.ttf");
+    }
+
+    @font-face {
+      font-family: "Cream";
+      src: url("../font/Cream Cake.ttf");
+    }
+
+    @font-face {
+      font-family: "Kid1";
+      src: url("../font/Kid Knowledge 1.otf");
+    }
+
+    @font-face {
+      font-family: "KidOutline";
+      src: url("../font/Kid Knowledge 1 outline.otf");
+    }
+
+    @font-face {
+      font-family: "KidRustic";
+      src: url("../font/Kid Knowledge 2 Rustic.otf");
+    }
+
+    @font-face {
+      font-family: "KidClean";
+      src: url("../font/Kid Knowledge 2 Clean.otf");
+    }
+
+
+  
+ 
+
+  body{
+    background-color:white;
+    font-family: "Learners", serif ;
+  }
+
+  .titulo{
+    color:red;
+    font: 30px Kid1;
+    text-align: center;
+  }
+
+  .titulo-last{
+    background-color:red;
+    color:white;
+    font: 20px Kid1;
+    -webkit-border-top-right-radius: 50px 40px;
+    -webkit-border-bottom-right-radius: 50px 40px;
+    -webkit-border-top-left-radius: 50px 40px;
+    -webkit-border-bottom-left-radius: 50px 40px;
+    padding: 10px;
+    text-align: center;
+   
+    
+  }
+
+
+
+  .first{
+    float: left;;
+    color:orange;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .second{
+    float:left;
+    color:green;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .third{
+    float:left;
+    color:purple;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .fourth{
+    float:left;
+    color:cornflowerblue;
+    font: 22px Kid1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .numberCircle {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    font: 40px Cream;
+    line-height: 3rem;
+}
+
+.item1{
+  background-color: orange;
+  float: left;
+  color:white;
+}
+
+.item2{
+  background-color: green;
+  float:left;
+  color:white;
+}
+
+.item3{
+  background-color: purple;
+  float:left;
+  color:white;
+}
+
+.item4{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+}
+
+.itemfirst{
+  background-color: orange;
+  float: left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemsecond{
+  background-color: green;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemthird{
+  background-color: purple;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.itemfourth{
+  background-color:cornflowerblue;
+  float:left;
+  color:white;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+
+.item5{
+  float:left;
+  
+}
+
+.violencia-item{
+  background-color:rgb(221, 183, 86);
+}
+
+.btn-primary {
+  background-color: transparent;
+  border-color: black;
+  color:black;
+}
+
+.header{
+  height:50px;
+  background-image: url('../img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x; 
+}
+
+.footer{
+  height:50px;
+  background-image: url('../img/tejido.jpg'); 
+  background-position: center top;
+  background-repeat:repeat-x;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+.imgWrapper4, .imgWrapper3 {
+    font-size: 0;
+    text-align: center;
+}
+.imgWrapper4 .imgResponsiva,
+.imgWrapper3 .imgResponsiva {
+    display: inline-block;
+    font-size: inherit;
+}
+.imgWrapper4 .imgResponsiva {width: 25%; max-width: 345px;}
+.imgWrapper3 .imgResponsiva {width: 33.3%; max-width: 345px;}
+
+.imgResponsiva img {
+    height: auto;
+    width: 100%;
+}
+
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:#E70505;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff
+}
+#scroll:hover {
+    background-color:#EE7979;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+  </style>
+ 
+  </head>
+  <body>
+  <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Ir arriba<span></span></a>
+    <div class= "header">
+                
+    </div>
+
+                  <div class="row" style=" margin-top: 1em;margin-bottom: 1em;">
+                    <div class="col-12">
+                      <b><a style="color:red;font-size: 10px;" href="../menu.html" >Volver<img style="color:red;" src = "../img/back.png" width= "30px" ></a></b>
+
+                       </div>
+                      </div>
+                          <!---->
+                                <h2 align="center" id="cem">CENTRO DE EMERGENCIA MUJER </h4>
+                                 <div class="col-12">
+                                 <div class="aos-item__inner">
+                                    <p align="justify"><strong>Es un servicio, que brinda atención especializada y confidencial y que actúa sobre las causas que limitan o evitan el ejercicio de los derechos de las niñas, niños y adolescentes, mediante: </p>
+                                  </div>
+                                  </div>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br>
+                                <br>
+                                <img src = "../img/cem1.png" width= "90px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <p>Se procura la recuperación del daño sufrido y se presta asistencia social. Asimismo, se realizan actividades de prevención a través de capacitaciones, campañas comunicacionales, formación de agentes comunitarios y movilización de organizaciones.</p>
+                                  </div>  
+                                </div>
+                               
+                              </div>
+                            </div>
+                          </div>  
+                           <div class="col-11">
+                                  <h4 class="first">Servicios profesionales que brinda el CEM a las personas afectadas por la violencia familiar y sexual  </h4>
+                                </div> 
+                        </div>
+
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-11">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ol type="1">
+                                      <li><strong>CENTRO DE EMERGENCIAS DE LA MUJER: <br>Su función principal no es recibir denuncias por violencia familiar o abuso sexual, sino asesorar a las mujeres para que sepan cómo hacerlo y brindarles gratuitamente los servicios de un abogado para que puedan llevar el caso al Poder Judicial.
+                                      Lo primero que debes hacer es acercarte a una de sus 245 sedes oficiales mediante comisarías u hospitales. Conócelas aquí.
+                                      Allí conocerás a una persona encargada que anotará tus datos personales y toda la información que le brindes sobre el hecho. Te explicará qué tipo de violencia has sufrido y por qué.
+                                      Puede ser abuso sexual, violencia familiar, física o psicológica. Y, de acuerdo a ello, te dirá que tipo de servicio recibirás por parte del personal del Centro de Emergencias de la Mujer.
+                                      Las puertas de los CEM regulares están abiertas de lunes a viernes desde las 8 de la mañana hasta las 4 y 15 de la tarde. Mientras que 77 CEM que funcionan en las comisarías se encuentran disponibles las 24 horas del día de los 365 días del año.
+                                      Si necesitas información detallada, puedes comunicarte al 419-7269.
+
+                                      </li>
+                                      <li><b><strong>LÍNEA 100: <br>
+                                      es un servicio gratuito de cobertura  nacional a cargo de un equipo de profesionales especializados en  brindar  contención emocional, orientación e información en temas de violencia familiar y abuso sexual, con acceso desde cualquier teléfono fijo, público o celular durante las 24 horas del día.
+                                      </b></li>
+                                      <li><b>CHAT 100: <br>
+                                      Diversos profesionales especializados en información y orientación psicológica ofrecen un servicio personalizado mediante el chat 100.
+                                      Si eres víctima de violencia familiar y sexual o padeces violencia en tu relación de enamoramiento y noviazgo, puedes recibir este servicio gratuito presionando aquí: http://sistemas.pncvfs.gob.pe/contra-la-violencia/.
+                                      Allí mantendrás una conversación confidencial, donde el especialista te explicará cómo prevenir situaciones de riesgo y abuso sexual, físico o psicológico.
+                                      Su horario de atención es de 8 de la mañana a 10 de la noche.
+                                      </b></li>
+                                      <li><b>SERVICIO DE ATENCION URGENTE:  <br>
+                                      A diferencia de los demás programas del MIMP, el Servicio de Atención Urgente brinda acciones inmediatas, pues coordina con un equipo profesional la atención de la víctima en el lugar en el que se encuentra.
+                                      Debido a que su trabajo es instantáneo, el gobierno exige que antes la víctima llame a la línea 100 y que su caso sea reportado por un medio de comunicación.
+                                      También brindan atención psicológica, legal y asistencia social.
+                                      Puedes obtener más información llamando al 419-7260.
+                                      Además de los casos de violencia familiar, abuso sexual y violencia psicológica, el Ministerio de la Mujer y Poblaciones Vulnerables (MIMP) atiende casos de violencia contra niños, niñas y adolescentes mediante el servicio de investigación tutelar
+                                      </b></li>
+                                    </ul>
+                              </div>
+                            </div>
+                          </div> 
+                                
+                        <!--listado del CEM-->
+
+                        <div class="col-11">
+                                  <h4 class="first">LISTADO DE CEM EN LA PROVINCIA DE CUSCO:  </h4>
+                                </div> 
+                        </div>
+
+                        <div class="row" style="text-align: justify;">
+                          <div class="col-12">
+                            <h2 align="center" id="pnp">POLICÍA NACIONAL DEL PERÚ  </h4>
+                                  <div class="col-12">
+                                    <p align="justify">La Policía Nacional del Perú es una institución del Estado que tiene por misión garantizar, mantener y restablecer el orden interno, prestar protección y ayuda a las personas y a la comunidad, garantizar el cumplimiento de las leyes y la seguridad del patrimonio público y privado, prevenir, investigar y combatir la delincuencia; vigilar y controlar las fronteras; con el propósito de defender a la sociedad y a las personas, a fin de permitir su pleno desarrollo, en el marco de una cultura de paz.<br>Policía Nacional del Perú (PNP) es una entidad adscrita a Ministerio del Interior </p>
+                                  </div>
+                                  <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br><br><img src = "../img/policia.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <p>Competencias de la PNP</p>
+                                    <ol type="a">
+                                      <li><b>Toda delegación recibe denuncias.</b></li>
+                                      <li><b>Realiza investigaciones preliminares. Parte o atestado.</b></li>
+                                      <li><b>En flagrante delito o de muy grave peligro de perpetración, facultado para allanar el domicilio y detener al agresor.</b></li>
+                                      <li><b>Podrá conducir de agrado o fuerza al denunciado para el esclarecimiento de los hechos.</b></li>
+                                      <li><b>Remite el atestado al Juez de Paz, Fiscal penal o de Familia.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                          </div> 
+                        </div>
+
+                       <div class="row" style="text-align: justify;">
+                          <div class="col-12">
+                            <h2 align="center" id="mp">MINISTERIO PÚBLICO  </h4>
+                                 <p align="left"><u>Competencias de la Fiscalía Provincial de Familia: </u></p>
+                                  <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <br><br><br><br><br><img src = "../img/ministerio.png" width= "125px" style="margin: auto;">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    
+                                    <ul>
+                                      <li><b>El Fiscal Provincial de Familia, da trámite a las peticiones de las víctimas, familiares, PNP, o de oficio.</b></li>
+                                      <li><b>Dicta las medidas de protección: Retiro del agresor del domicilio. Impedimento de acoso a la víctima. Suspensión temporal de visitas. Inventarios sobre sus bienes. Otras medidas. </b></li>
+                                      <li><b>Formula demanda y pone en conocimiento del Juez de familia las medidas de protección adecuadas.</b></li>
+                                      <li><b>Solicitará las medidas cautelares (medida anticipada fuera de proceso) al Juez de Familia – alimentos.</b></li>
+                                      <li><b>Visitar periódicamente delegaciones policiales para conocer denuncias sobre violencia familiar e intervenir de oficio.</b></li>
+                                    </ul>
+                                  </div>  
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                          </div> 
+                        </div>
+                        <div class="col-12">
+                        <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                            <p align="justify">Las Fiscalías Especializadas tienen competencia material según lo dispuesto en el artículo 3 del Decreto Legislativo Nº 1368 que crea el Sistema Nacional Especializado de Justicia para la Protección y Sanción de la Violencia contra las Mujeres e Integrantes del Grupo Familiar. Las Fiscalías Especializadas son competentes para conocer las denuncias penales, por la presunta comisión de los siguientes delitos: </p>
+                         </div>
+                       </div>
+                     </div>
+                         <div class="row" style="text-align: justify;">
+                          <div class="col-11">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                <ul>
+                                      <li><b>Feminicidio, previsto en el artículo 108-B del Código Penal.</b>
+                                      </li>
+                                      <li><b>Lesiones, previstos en los artículos 121-B, 122, 122-B, en concordancia con el artículo 124-B del Código Penal, cuando la víctima es una mujer agredida por su condición de tal, niños, niñas o adolescentes.
+                                      </b></li>
+                                      <li><b>Violación sexual, previstos en los artículos 170, 171, 172, 173, 173-A y 174, y sus formas agravadas comprendidas en el artículo 177 del Código Penal cuando la víctima es una mujer agredida por su condición de tal, o niños, niñas o adolescentes.
+                                      </b></li>
+                                      <li><b>Actos contra el pudor en menores, previsto en el artículo 176-A del Código Penal.
+                                      </b></li>
+                                    </ul>
+                              </div>
+                              <div class="col-12">
+                        <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                            <p >Del mismo modo, las Fiscalías Especializadas son competentes para conocer los actos de acoso, en todas sus modalidades, incluidos el acoso sexual y chantaje sexual; así como la difusión de imágenes, materiales audiovisuales o audios con contenido sexual, conforme a lo previsto en el Decreto Legislativo Nº 1410</p>
+                         </div>
+                       </div>
+                     </div>
+                            </div>
+                          </div> 
+
+                          <div class="col-12">
+                            <h2 align="center" id="pj">MINISTERIO DE JUSTICIA  </h4>
+                                 <p align="left" ><u>Juez Especializado en Familia: </u> </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                    <div class="col-3">
+                                        <img src = "../img/image3.png" width= "80px" style="margin: auto;">
+                                        <img src = "../img/poderjudicial.png" width= "80px" style="margin: auto;">
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>Le corresponde el conocimiento del proceso en función del domicilio de la víctima o del lugar de la agresión.</b></li>
+                                      <li><b>Las pretensiones se tramitan como proceso único.</b></li>
+                                      <li><b>La Resolución Judicial, pone fin al proceso: Determina si ha existido o no VF. Establece las medidas de protección Suspensión temporal de la cohabitación. Salida temporal del agresor del domicilio. Prohibición temporal de visitas. Prohibición de cualquier forma de acoso a la víctima. El tratamiento que debe recibir la víctima, su familia y el agresor. La reparación del daño. Establecimiento de una pensión de alimentos</b></li>
+                                      <li><b>En caso de incumplimiento ejerce facultades coercitivas.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <p align="left"><u>Intervención del Juez penal</u>  </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div class="aos-item__inner">
+                                    <div class="col-3">
+                                        <br><br><br><br><img src = "../img/juez.png" width= "80px" style="margin: auto;">  
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div class="aos-item__inner">
+                                    <ol type="a">
+                                      <li><b>Tipificados los hechos como delitos, dicta las medidas cautelares, así como disponer la detención del encausado, según la gravedad.</b></li>
+                                      <li><b>Adopta todas las medidas de protección.</b></li>
+                                      <li><b>La Resolución Judicial, pone fin al proceso: Determina si ha existido o no VF. Establece las medidas de protección Suspensión temporal de la cohabitación. Salida temporal del agresor del domicilio. Prohibición temporal de visitas. Prohibición de cualquier forma de acoso a la víctima. El tratamiento que debe recibir la víctima, su familia y el agresor. La reparación del daño. Establecimiento de una pensión de alimentos</b></li>
+                                      <li><b>En caso de incumplimiento ejerce facultades coercitivas.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <p align="left"> <u>Disposiciones comunes</u>  </p>
+                          <div class="row">
+                          <div class="col-3">
+                            <div class="aos-item" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                              <div >
+                                    <div class="col-3">
+                                        <br><br><img src = "../img/disp.png" width= "80px" style="margin: auto;">  
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class= "row">
+                              <div class="aos-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1500">
+                                <div class="col-11">
+                                  <div>
+                                    <ol type="a">
+                                      <li><b>El proceso se mantendrá en reserva.</b></li>
+                                      <li><b>Todas las instituciones públicas y privadas, tienen el deber de colaborar para la evaluación física y psicológica y asistencia de víctimas y su familia.</b></li>
+                                      <li><b>Los certificados de salud, física y mental, que expidan los establecimientos de salud, tienen valor probatorio y son gratuitos.</b></li>
+                                    </ol>
+                                  </div>  
+                                </div>
+                                
+                              
+                              </div>
+                            </div>
+                          </div>    
+                        </div>
+                        <div class="wrap">
+                          <button  onclick="geo()"class="button"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;BUSCA AYUDA</button>
+                        </div>
+                        <div class= "footer">
+                
+                        </div>
+                        
+                        
+
+          
+            
+              
+              <script>
+                AOS.init({
+                  easing: 'ease-in-out-sine'
+                });
+              </script>
+ 
+
+              <script>
+                var latitude = "";
+                var longitude = "";
+
+
+                function geo(){
+                  position();
+                  }
+
+               
+                    
+                var onSuccess = function(position) {
+                latitude = position.coords.latitude;
+              longitude = position.coords.longitude;
+                
+              window.location.href = 'https://www.google.com/maps/d/u/3/edit?mid=1So9IvGMoUBhqwdeu70f3VgWI8jaK6cj0&usp=sharing =es ='+latitude+'%2C'+longitude+'&z=17'; 
+                
+              
+                
+                };
+            
+                function onError(error) {
+                    alert('Código: '+ error.code+ '\n' + 'Mensaje: ' + error.message + '\n');
+                }
+                
+                   
+                function position(){
+                var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError,{ enableHighAccuracy: true });
+                     
+                }        
+            </script>
+      
+            
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--menu-->
+     <!-- Include jQuery -->
+    <script src="javascripts/jquery.js"></script>
+    <!-- Include the Sidr JS -->
+    <script src="js/sidr/jquery.sidr.min.js"></script>
+    
+    
+
+    
+  </body>
+</html>

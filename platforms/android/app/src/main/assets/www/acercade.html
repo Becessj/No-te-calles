@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NO TE CALLES</title>
+    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <link href="css/overlay.css" rel="stylesheet">
+     
+ 
+    
+    
+ 
+     <!DOCTYPE html>
+     <html lang="en">
+       <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href="css/bootstrap.min.css" rel="stylesheet">
+         <link href="css/style.css" rel="stylesheet">
+         <link href="css/overlay.css" rel="stylesheet">
+         <link rel="stylesheet" href="dist/aos.css" />
+         <script src="dist/aos.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     
+     <script type='text/javascript'>
+     $(document).ready(function(){ 
+         $(window).scroll(function(){ 
+             if ($(this).scrollTop() > 100) { 
+                 $('#scroll').fadeIn(); 
+             } else { 
+                 $('#scroll').fadeOut(); 
+             } 
+         }); 
+         $('#scroll').click(function(){ 
+             $("html, body").animate({ scrollTop: 0 }, 600); 
+             return false; 
+         }); 
+     });
+     </script>
+       <style type='text/css'>
+         * ,*::after, *::before{
+      box-sizing:border-box;
+     }
+     .wrap {
+       height: 15%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+     
+     #scroll {
+         position:fixed;
+         right:10px;
+         bottom:10px;
+         cursor:pointer;
+         width:50px;
+         height:50px;
+         background-color:#E70505;
+         text-indent:-9999px;
+         display:none;
+         -webkit-border-radius:60px;
+         -moz-border-radius:60px;
+         border-radius:60px
+     }
+     #scroll span {
+         position:absolute;
+         top:50%;
+         left:50%;
+         margin-left:-8px;
+         margin-top:-12px;
+         height:0;
+         width:0;
+         border:8px solid transparent;
+         border-bottom-color:#ffffff
+     }
+     #scroll:hover {
+         background-color:#EE7979;
+         opacity:1;filter:"alpha(opacity=100)";
+         -ms-filter:"alpha(opacity=100)";
+     }
+     .button {
+       min-width: 300px;
+       min-height: 60px;
+       font-family: 'Nunito', sans-serif;
+       font-size: 22px;
+       text-transform: uppercase;
+       letter-spacing: 1.3px;
+       font-weight: 700;
+       color: #313133;
+       background: #4FD1C5;
+     background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+       border: none;
+       border-radius: 1000px;
+       box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+       transition: all 0.3s ease-in-out 0s;
+       cursor: pointer;
+       outline: none;
+       position: relative;
+       padding: 10px;
+       }
+     
+     button::before {
+     content: '';
+       border-radius: 1000px;
+       min-width: calc(300px + 12px);
+       min-height: calc(60px + 12px);
+       border: 6px solid #00FFCB;
+       box-shadow: 0 0 60px rgba(0,255,203,.64);
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       opacity: 0;
+       transition: all .3s ease-in-out 0s;
+     }
+     
+     .button:hover, .button:focus {
+       color: #313133;
+       transform: translateY(-6px);
+     }
+     
+     button:hover::before, button:focus::before {
+       opacity: 1;
+     }
+     
+     button::after {
+       content: '';
+       width: 30px; height: 30px;
+       border-radius: 100%;
+       border: 6px solid #00FFCB;
+       position: absolute;
+       z-index: -1;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       animation: ring 1.5s infinite;
+     }
+     
+     button:hover::after, button:focus::after {
+       animation: none;
+       display: none;
+     }
+     @keyframes ring {
+       0% {
+         width: 30px;
+         height: 30px;
+         opacity: 1;
+       }
+       100% {
+         width: 300px;
+         height: 300px;
+         opacity: 0;
+       }
+     }
+     .contenedor-caja-video{
+      width: 150%;
+     }
+     
+     .caja-video  {
+      position:relative;
+      
+       width: 100%;
+      padding-bottom:56.25%;
+      
+     }
+     
+     .caja-video::before {
+      position: absolute;
+      content:'';
+      
+      display:block;
+      padding-bottom:56.25%;
+     }
+     
+     .video{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      
+     }
+     
+         @font-face {
+           font-family: "Learners";
+           src: url("font/Letters for Learners.ttf");
+         }
+     
+         @font-face {
+           font-family: "Cream";
+           src: url("font/Cream Cake.ttf");
+         }
+     
+         @font-face {
+           font-family: "Kid1";
+           src: url("font/Kid Knowledge 1.otf");
+         }
+     
+         @font-face {
+           font-family: "KidOutline";
+           src: url("font/Kid Knowledge 1 outline.otf");
+         }
+     
+         @font-face {
+           font-family: "KidRustic";
+           src: url("font/Kid Knowledge 2 Rustic.otf");
+         }
+     
+         @font-face {
+           font-family: "KidClean";
+           src: url("font/Kid Knowledge 2 Clean.otf");
+         }
+     
+     
+       
+      
+     
+       body{
+         background-color:white;
+         font-family: "Learners", serif ;
+       }
+     
+       .titulo{
+         color:red;
+         font: 30px Kid1;
+         text-align: center;
+       }
+     
+       .titulo-last{
+         background-color:red;
+         color:white;
+         font: 20px Kid1;
+         -webkit-border-top-right-radius: 50px 40px;
+         -webkit-border-bottom-right-radius: 50px 40px;
+         -webkit-border-top-left-radius: 50px 40px;
+         -webkit-border-bottom-left-radius: 50px 40px;
+         padding: 10px;
+         text-align: center;
+        
+         
+       }
+     
+     
+     
+       .first{
+         float: left;;
+         color:orange;
+         font: 22px Kid1;
+         margin-top: 10px;
+         margin-left: 10px;
+       }
+     
+       .second{
+         float:left;
+         color:green;
+         font: 22px Kid1;
+         margin-top: 10px;
+         margin-left: 10px;
+       }
+     
+       .third{
+         float:left;
+         color:purple;
+         font: 22px Kid1;
+         margin-top: 10px;
+         margin-left: 10px;
+       }
+     
+       .fourth{
+         float:left;
+         color:cornflowerblue;
+         font: 22px Kid1;
+         margin-top: 10px;
+         margin-left: 10px;
+       }
+     
+       .numberCircle {
+         border-radius: 50%;
+         width: 35px;
+         height: 35px;
+         color: #fff;
+         text-align: center;
+         font: 40px Cream;
+         line-height: 3rem;
+     }
+     
+     .item1{
+       background-color: orange;
+       float: left;
+       color:white;
+     }
+     
+     .item2{
+       background-color: red;
+       float:left;
+       color:white;
+     }
+     
+     .item3{
+       background-color: purple;
+       float:left;
+       color:white;
+     }
+     
+     .item4{
+       background-color:cornflowerblue;
+       float:left;
+       color:white;
+     }
+     
+     .itemfirst{
+       background-color: orange;
+       float: left;
+       color:white;
+       border-radius: 15px;
+       padding-left: 15px;
+     }
+     
+     .itemsecond{
+       background-color: green;
+       float:left;
+       color:white;
+       border-radius: 15px;
+       padding-left: 15px;
+     }
+     
+     .itemthird{
+       background-color: purple;
+       float:left;
+       color:white;
+       border-radius: 15px;
+       padding-left: 15px;
+     }
+     
+     .itemfourth{
+       background-color:cornflowerblue;
+       float:left;
+       color:white;
+       border-radius: 15px;
+       padding-left: 15px;
+     }
+     
+     .item5{
+       float:left;
+       
+     }
+     
+     .violencia-item{
+       background-color:rgb(221, 183, 86);
+     }
+     
+     .btn-primary {
+       background-color: transparent;
+       border-color: black;
+       color:black;
+     }
+     
+     .header{
+       height:50px;
+       background-image: url('img/tejido.jpg'); 
+       background-position: center top;
+       background-repeat:repeat-x; 
+     }
+     
+     .footer{
+       height:50px;
+       background-image: url('img/tejido.jpg'); 
+       background-position: center top;
+       background-repeat:repeat-x;
+       position: relative;
+       width: 100%;
+       bottom: 0;
+     }
+     .imgWrapper4, .imgWrapper3 {
+         font-size: 0;
+         text-align: center;
+     }
+     .imgWrapper4 .imgResponsiva,
+     .imgWrapper3 .imgResponsiva {
+         display: inline-block;
+         font-size: inherit;
+     }
+     .imgWrapper4 .imgResponsiva {width: 25%; max-width: 345px;}
+     .imgWrapper3 .imgResponsiva {width: 33.3%; max-width: 345px;}
+     
+     .imgResponsiva img {
+         height: auto;
+         width: 100%;
+     }
+     .responsive {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+     
+       </style>
+      
+       </head>
+       <Body>   
+         <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+         <div class= "header">
+                     
+         </div>
+                       <div class="row" >
+                         <div class="col-12">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><a style="color:red;font-size: 10px;" href="index.html" >Volver<img style="color:red;" src = "img/back.png" width= "80px" ></a></b>
+     
+                            </div>
+                            <br><br><br><br><br><br><br>
+                            <div>
+                              <img src="img/screen.png" alt="Nature" class="responsive"><br><br><br><br><br><br><br>
+                            </div>
+                            <br><br>
+                        <div class= "footer">
+                
+                        </div>
+  </body>
+</html>
